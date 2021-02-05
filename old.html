@@ -1,0 +1,3629 @@
+<head><script type="text/javascript">
+    (function() {
+      var container = document.querySelector('#_tcx-9a3tvncgmtt');
+      if (!container) {
+        return;
+      }
+
+      function addToContainer(url, text) {
+        const wrapper = document.createElement('div');
+        wrapper.setAttribute('data-tcx-url', url);
+        wrapper.innerText = text;
+        container.appendChild(wrapper);
+      }
+
+      const fetch = window.fetch
+      window.fetch = function() {
+        return Promise.resolve(fetch.apply(window, arguments))
+            .then(async response => {
+              if (response.ok) {
+                try {
+                  const clone = response.clone();
+                  const json = await clone.json();
+                  addToContainer(clone.url, JSON.stringify(json));
+                } catch (err) {}
+              }
+              return response;
+            });
+      };
+
+      var XHR = XMLHttpRequest.prototype;
+      var send = XHR.send;
+      var open = XHR.open;
+      XHR.open = function(method, url) {
+        this.url = url;
+        return open.apply(this, arguments);
+      };
+      XHR.send = function() {
+        this.addEventListener('load', function() {
+          try {
+            const response = this.response;
+            if (response && response.length) {
+              const firstChar = response[0];
+              if (firstChar === '[' || firstChar === '{') {
+                addToContainer(this.url, response);
+              }
+            }
+          } catch (err) {
+            // No-op.
+          }
+        });
+        return send.apply(this, arguments);
+      };
+    })();
+  </script>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="md/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link rel="stylesheet" href="md/css/new.css">
+  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async="" defer=""></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <meta name="google-site-verification" content="Hj8H7aP3B287T9uUEyYjfYPt71RNm8Je1C9NzYqyxGI">
+<style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+}</style><script charset="utf-8" src="https://platform.twitter.com/js/button.63c51c903061d0dbd843c41e8a00aa5a.js"></script></head>
+
+<body data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed="">
+  <header>
+    <nav class="transparent z-depth-0">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo grey-text text-darken-4">About Alex Mashinsky</a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse grey-text text-darken-4"><i class="material-icons">menu</i></a>
+
+        <ul id="nav-mobile" class="side-nav collapsible fixed" style="transform: translateX(0%);">
+          <li>
+            <div id="alex">
+              <div class="name">Alex Mashinsky</div>
+              <div class="motto">The greatest risk is not taking one</div>
+              <div class="twitter">
+                <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 224px; height: 20px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.96fd96193cc66c3e11d4c5e4c7c7ec97.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=Mashinsky&amp;show_count=true&amp;show_screen_name=true&amp;size=m&amp;time=1612461408398" data-screen-name="Mashinsky"></iframe>
+                <script src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+              </div>
+              <div class="email"><a href="mailto:alex@mashinsky.com">alex@mashinsky.com</a></div>
+            </div>
+          </li>
+          <li class="active"><a href="index.html" class="waves-effect">About Alex Mashinsky</a></li>
+          <li><a href="md/blog.html" class="waves-effect">Blog</a></li>
+          <li><a href="md/ventures.html" class="waves-effect">Founded Ventures</a></li>
+          <li><a href="http://www.governingdynamics.com/"><i class="material-icons">link</i> Venture Capital</a></li>
+          <li><a href="md/boards.html" class="waves-effect">Boards</a></li>
+          <li><a href="md/clips.html" class="waves-effect">Video clips</a></li>
+          <li><a href="md/ideas.html" class="waves-effect">Ideas</a></li>
+          <li><a href="md/patents.html" class="waves-effect">Patents</a></li>
+          <li><a href="md/awards.html" class="waves-effect">Awards</a></li>
+          <li><a href="md/press.html" class="waves-effect">Press &amp; Events</a></li>
+          <li><a href="md/podcasts.html" class="waves-effect">Podcasts</a></li>
+          <li><a href="md/schedule.html" class="waves-effect">Schedule</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h5 style="text-align: center"><a href="https://foundr.com/cryptocurrencies-alex-mashinsky-celsius/" target="_blank">Listen to Founr podcast with Alex</a></h5>
+      <p style="text-align: center; background: #fff; margin-bottom: 32px"><img class="responsive-img" src="images/top_10_exits.png"></p>
+
+      <img class="alex_pic right-padding" src="images/alex_pic2.jpg">
+      <p><a href="https://en.wikipedia.org/wiki/Alex_Mashinsky">Alex Mashinsky</a> was born into communism, reared
+        under socialism,
+        and is currently thriving under capitalism. He is a prominent entrepreneur who has founded several companies
+        over the years,
+        including <a href="http://www.celsius.network/">Celsius Network</a>,
+        <a href="http://www.groundlink.com/">GroundLink</a>, <a href="http://www.transitwireless.com/">Transit Wireless</a>,
+        <a href="https://www.crunchbase.com/organization/elematics">Elematics</a> and <a href="https://www.crunchbase.com/organization/arbinet#section-investors">Arbinet</a>.</p>
+
+      <p>Alex disrupted several industries but he is most known as the inventor of VOIP which today enables over 1B
+        people worldwide
+        to use free voice over the internet for free. His new startup Celsius Network, is disrupting the banks, it is a
+        community-based Proof-of-Stake blockchain protocol allowing members to borrow dollars against their crypto
+        assets and
+        to earn interest when they deposit (and lend) their crypto out. he wants 7.5B people to go
+        <a href="https://youtu.be/Z543pFBJq4c?t">From VOIP to MOIP</a> (Money over IP)</p>
+
+      <p>Alex's success as an entrepreneur stems from his acute ability to identify future trends, assemble world-class
+        teams and
+        raise enough money to fund his projects. Two of his companies, Arbinet and Transit Wireless achieved a
+        monopolistic hold in
+        their respective industries and pioneered new business models and groundbreaking technologies.</p>
+
+      <p>Alex has a long history with high tech, evidenced by his powerful intellectual property portfolio. He has
+        authored over
+        50 patents that cover aspects of <a href="https://patents.google.com/patent/US7269247">VOIP</a>,
+        <a href="https://www.google.com/patents?id=LN-PAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false">Smart Grid</a>,
+        <a href="https://www.google.com/patents?id=amXxAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false">Ad
+          exchanges</a>,
+        <a href="https://www.google.com/patents?id=MHazAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false">Groupon</a>,
+        <a href="https://www.google.com/patents?id=dVSgAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false">Twitter</a>,
+        <a href="https://www.google.com/patents?id=I0rRAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false">Skype</a>,
+        <a href="https://www.google.com/patents?id=zuqtAAAAEBAJ&amp;printsec=abstract#v=onepage&amp;q&amp;f=false">App Store</a>,
+        <a href="https://docs.google.com/a/mashinsky.com/viewer?url=patentimages.storage.googleapis.com/pdfs/US20060206422.pdf">Netflix
+          streaming concept</a>
+        and many other top performing web companies. He is one of the leading evangelists of web-based exchanges.</p>
+
+      <p>Due to his extensive experience as a prolific inventor and a business strategist, Alex has been a featured
+        speaker at over
+        250 international conferences. He has also made numerous TV appearances on
+        <a href="https://www.youtube.com/watch?time_continue=32&amp;v=Z-quhLTcNt4">business networks</a> and talk shows.</p>
+
+      <p>He has received numerous awards, notably the prestigious Albert Einstein Technology Medal in 2000, the
+        Technology Foresight Award
+        for Innovation (presented in Geneva at Telecom '99) and Crain's Top Entrepreneur Award in 2010. He has also
+        been nominated for
+        E&amp;Y's Entrepreneur of the Year Award in 2002 and 2011.</p>
+
+      <p>After years of entrepreneurship, Alex subsequently gravitated towards investing in startups, founding his
+        early stage venture
+        capital firm, Governing Dynamics. Over the years, Alex has raised over $1 billion in venture and private equity
+        funds to help
+        position his startups as leaders in their fields. Arbinet's fundraising efforts were even documented in an HBS
+        case study in 2001.</p>
+
+      <p>Currently based in New York, Alex serves as a Managing Partner of Governing Dynamics. The firm has invested in
+        Cryptocurencies and
+        ICO's as well as startups focused on AI/ML, biotech and cybersecurity.</p>
+
+      <p>Alex has invested in over <a href="https://angel.co/mashinsky">60 startups</a> over the years, recording many
+        successes
+        and an equal number of failures. As a prominent figure in the New York entrepreneurial scene, he has previously
+        been a
+        member of the YPO's NYC chamber. He believes that "the secret to success is finding something to do in which
+        your skills can exceed your ambitions."</p>
+    </div>
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2000-2017 Alex Mashinsky
+        <span class="right">The greatest risk is not taking one</span>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="md/js/materialize.js"></script>
+  <script src="md/js/init.js"></script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fmashinsky.com" title="Twitter settings iframe" style="display: none;"></iframe><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body>
+
+
+<body data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed="">
+  <header>
+   
+  </header>
+
+  <main>
+    <div class="container">
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">link</i>
+            <a href="https://www.cryptoglobe.com/latest/2018/05/exclusive-interview-with-alex-mashinsky-celsius-ceo-and-voip-innovator/">Exclusive
+              Interview with Alex Mashinsky, Celsius CEO and VoIP Innovator</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">link</i>
+            <a href="https://medium.com/@Mashinsky">Follow Mashinsky at Medium</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">link</i>
+            <a href="https://hackernoon.com/fat-protocols-vs-dapps-creating-long-term-value-on-the-public-blockchain-565637747557">Fat
+              Protocols Vs. DApps: Creating Long Term Value on the Public Blockchain</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">link</i>
+            <a href="https://medium.com/@Mashinsky">Thanks Facebook, Now We All know Why Privacy Is Important</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">link</i>
+            <a href="https://medium.com/@Mashinsky">7 Ways to Bank Using Cryptocurrencies</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">link</i>
+            <a href="https://medium.com/@Mashinsky">Replacing Banks &amp; Stock Exchanges: How Crypto Startups Are Changing
+              Finance Right Now</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">link</i>
+            <a href="https://medium.com/@GDinIsrael/silicon-wadi-vs-silicon-valley-f0a0c698d3a5">Silicon Wadi vs.
+              Silicon Valley</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">link</i>
+            <a href="https://medium.com/@GDinIsrael/how-ai-is-going-to-eat-software-and-then-the-world-ec098b1866f9">How
+              AI Is Going to Eat Software and Then the World</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">link</i>
+            <a href="https://medium.com/@GDinIsrael/why-biotech-in-2017-is-like-the-web-in-1995-9340130c2868">Why
+              Biotech in 2017 is like the Web in 1995?</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <i class="material-icons">link</i>
+            <a href="https://medium.com/@GDinIsrael/a-giant-leap-for-israeli-tech-de423c6f4322">A Giant Leap for
+              Israeli Tech?</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Why AGFA will be worth $4T in the next 10 years</div>
+          <div class="collapsible-body">
+            <p>Apple, Google, Facebook and Amazon (AGFA) are the 4 horseman of the Web 2.0 wave. We love the founders,
+              their products and most of us would love to work in any of these companies. These companies are now worth
+              $800b in aggregate and are growing their revenues more than 40% a year.</p>
+            <p>The AGFA group is creating the most value in the tech sector and I argue that they will continue to do
+              so because they all represent the Best 3 P's - Product, Platform, Protocol.</p>
+            <p>Each one of these companies has managed to carve out a large segment of the digital lifestyle of the
+              future. Hundreds of thousand's of partners have tied their future to each one of these platforms and they
+              all use the API protocols published by these companies to enable e-commerce in hundreds of billions of
+              dollars.</p>
+            <p>The surprising fact is that none of these companies has yet captured more than 25% of the market share
+              in their core segment and thus still have plenty of growth ahead of them.</p>
+            <p class="author">Alex Mashinsky August 2012.</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            The "Startup Cambrian Explosion"</div>
+          <div class="collapsible-body">
+            <p><a href="../images/chart-of-the-day-tech-valuations-june-2011.gif"><img style="margin: 0 0 0 5px; float: right" src="../images/chart-of-the-day-tech-valuations-june-2011-small.gif" width="200" height="191" alt=""></a>
+              In 2011 the overall investments by Angels have for the first time exceeded the total investments by A
+              round venture funds, the "Startup Cambrian Explosion" driven by a combination of hype from Facebook,
+              Twitter and other successful startups combined with the highest unemployment in the 18-35 year old
+              professional in 70 years and glut of Angel money chasing the next big exit has resulted in thousands of
+              new startups being launched nationwide.</p>
+            <p>With the explosion of cheap cloud based services and API infrastructure of hundreds of Web 2.0 platform
+              companies it now costs less than $100,000 to launch a full beta service on the web or a mobile platform,
+              thus the barriers to a product launch have been cut by 90% from where they were 10 years ago.</p>
+            <p>Many of these services have managed to get over 1,000,000 users in less than 12 month with NO marketing,
+              relying entirely on their social network and the extended social graph to create a chain reaction of
+              subscription and adoption which in turn drives free but valuable feedback which drives iteration and
+              improvement of the service. The best startups of the past 5 years have emerged successfully scaling this
+              model.</p>
+            <p>These young companies still need capital and so an ecosystem of angel investors have sprung up in all
+              major cities to take pieces of such companies and bet on their future. All such investors hope to be part
+              of the 3:30:300 explosion which came to symbolize the level of valuations startups can expect if they can
+              deliver the hockey stick growth Venture capitalists are looking for at the Seed, A and B rounds.</p>
+            <p>The unseen and devastating part of this explosion is the inevitable death of the vast majority of these
+              startups as they try to leap from the seed stage to the A round safety of Venture funding. Like the
+              gazelles trying to cross the Mara river in the Serengeti many will perish but the strongest and fastest
+              will make it to the other bank of the river and continue the journey of life.</p>
+            <p>In this chasm of A round death is where fast iteration and constant pivoting separates the leaders from
+              the followers. In the words of Steve Jobs "Innovation distinguishes between a leader and a follower" the
+              best startups win by fast innovation and we all know what happens to the followers.</p>
+            <p>The problem facing all of these survivors is that there is not enough "A round ramps" on the other bank
+              of the river to receive all these new gazelles. They all think they are destined for greatness. Only the
+              top stars will be able to leap over the rest of the herd to safety in the ranks of the few A round
+              investors who still have dry powder to fund new startups.</p>
+            <p>These survivors are nurtured and supported with A round funding, recruitment and networking and as long
+              as they continue to scale on the hockey stick they can quickly join the ranks of legends like Groupon and
+              EBay which are the two fastest growth companies in history. If they fail to deliver they will not receive
+              the coveted B round and may be even abandoned as less and less capital is available to fund fewer success
+              stories at ever higher valuations.</p>
+            <p>The "Startup Cambrian Explosion" is everything we experienced in the 2000 bubble but it is 10x bigger in
+              absolute numbers. Natural selection now works much faster and in a much more brutal way. New startups die
+              within months and their teams scatter to help others bet for the fences with new ideas. It is not
+              uncommon to meet twenty something coders who have already been on the teams of five or even ten startups.</p>
+            <p>I continue to learn new lessons in this new boom as both a founder and angel investor in more than 50
+              companies, I can say that is it harder than ever to figure out which companies will make it and what is a
+              good investment at any stage of the game. But it is fascinating game which I love.</p>
+            <p class="author">Alex Mashinsky November 2011.</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Are we in the beginning of a new bubble</div>
+          <div class="collapsible-body">
+            <p>Its mid 2011 and many have already forgot that we just had the worst recession since the great
+              depression. companies are going public at valuations not seen since 1999. Every downturn brings
+              opportunity and allows new ideas to take hold, I believe that despite few abnormalities with specific web
+              companies we are in the beginning of another 10 year boom cycle driven by several major trends. Its not a
+              bubble but it could easily become one. The following listing represent long term sustainable trends that
+              should support long term higher valuations:</p>
+            <ol>
+              <li><strong>Globalization</strong> - China, India, Brazil &amp; Most of Africa are experiencing such fast
+                growth that their needs for technology and infrastructure will drive demand in the US and EU for the
+                next 10-20 years.</li>
+              <li><strong>The Web</strong> - While Web 1.0 was all about infrastructure Web 3.0 is all about services
+                which include social and commerce applications. This new boom is long lasting since it engages over 2
+                billion people worldwide who have just recently joined the web and are still exploring new ways of
+                socializing and transacting. Expect re invention of all the popular services you currently use -
+                Amazon, Ebay, Google and others.</li>
+              <li><strong>Energy</strong> - the production and distribution of electricity is up for a reinvention.
+                Hundreds of billions of dollars were invested in new ways to produce energy and clean tech innovations
+                over the past 10 years, finally many of these are of scale and are starting to hit the main markets. I
+                expect to see major breakthroughs in the next 10 years that will transform how we generate and consume
+                electricity.</li>
+              <li><strong>Transportation</strong> - The transition worldwide to electric transport is a major global
+                trend that involves many industries and millions of workers. This transformation will help ensure that
+                we don't hit another recession any time soon.</li>
+            </ol>
+            <p>With all these macro trends hitting at the same time you can expect many new winners in each category.
+              As each of these trends takes hold and involves more and more people around the world greater disruption
+              and opportunities will arise, Expect new companies to replace old ways of doing things and create new
+              industry leaders. Identifying such opportunities and creating the companies that will transform such
+              industries or investing in the leaders is hard and full of land mines. Its always hard to judge timing
+              and adoption cycle of new ideas, its also very hard to find the right people and put them together to
+              create an industry leader.</p>
+            <p>Change is opportunity and there is more change than ever hitting us from all directions.</p>
+            <p class="author">Alex Mashinsky June 2011.</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Future Energy - Reverse cold fusion</div>
+          <div class="collapsible-body">
+            <p>With Oil nearing $100 a barrel, there is heightened demand for ideas that can economically and safely
+              replace burning oil and coal to generate electrical and locomotive power.</p>
+            <p>As we all know from Einstein’s famous E=mc2, there is a lot of energy to be had if you can break down
+              mater or move it from one atomic state to another. All recent efforts to create a contained chain
+              reaction that generated over unity from fusion have failed but alternatives which include wind and solar
+              power are not going to solve the world's needs.</p>
+            <p>A controversial idea which has its roots in NY over 100 years ago was raised by Nikola Tesla, he
+              proposed extracting electromagnetic energy trapped in the ether. His idea that creating a disturbance in
+              the electromagnetic universe around us could result in a standing wave which we can tap into and extract
+              more energy than was invested in the disturbance ,was called by many, a violation of the basic rules of
+              energy preservation.</p>
+            <p>It is amazing to me how conservatism and lack of innovation can keep good ideas under wraps for so long.
+              While I am a believer in the preservation of energy, these rules must apply to closed circuit measurement
+              and not the energy state of the universe as a whole. Extracting energy in one part of the universe will
+              be compensated in another with no overall violation. Zero Point Energy or (ZPE) which is a proven
+              fundamental part of Quantum Mechanics Theory (QMT) tells us that while difficult, tapping such energy
+              when a disturbance takes place is possible and clearly within the rules. The appearance of matter is due
+              to such disturbance of the electromagnetic time space medium.</p>
+            <p>A great example of such quantum disturbance is an electric storm or Lightning. It’s an "open circuit
+              phenomena" which moves electromagnetic energy from one point to the next many times without touching the
+              earth or the ground. While we don't know how to tap it, electrical storms generate several times more
+              energy than all human power plants combined.</p>
+            <p>Another example is the earth’s magnetic fields which were measured to generate over 500,000,000 Amperes
+              of equivalent power and to which we have not been able to tap as well. It is all around us all the time.</p>
+            <p>My point is, what we miss is an Energy conversion mechanism not a power source.</p>
+            <p>One idea I am working on is to create a self sustained electromagnetic flux inside matter and then tap
+              such flux to generate electrical power. Many experiments have been made over the years but they were not
+              based on scientific formulations that broke new grounds, rather they relied on experimentation with
+              electromagnetism to try and discover new ways to create energy.</p>
+            <p>If matter can be fused to create heavier elements, matter can be un-fused to create lighter elements and
+              in the process we can extract the E part of Einstein's equation. It is easy to do so with unstable
+              radioactive materials but try to do it with Copper or Lead.</p>
+            <p>The key is to do so in a contained and controllable fashion that balances the chain reaction with
+              extraction and do it without the need to use high temperatures and Plasma containing magnetic fields.</p>
+            <p class="author">Alex Mashinsky May 2007.</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            When you don't know what you don't know</div>
+          <div class="collapsible-body">
+            <p>We have recently witnessed several Web 2.0 companies invent new user mediums and gather over 100m users
+              in a few years. Until their launch, no one thought they were necessary. This process has proven that the
+              web is just beginning its transformation of the world as we know it. None of these company founders knew
+              ahead of time what they were building or that their applications would be so successful with so many
+              users. They did not think of monetization or cash flow. Their lack of knowledge about what needs to be
+              there to make it a good business allowed them to make their venture a smashing success.</p>
+            <p>So what do we know about the web? Well nothing, it is so fundamentally changing what is possible and how
+              things will be done in the future that prior business knowledge is an obstacle not a benefit. We really
+              don't know what we don't know.</p>
+            <p>Berkeley Rice was quoted saying "visionary people are visionary partly because of the very great many
+              things they don't see". That has never been truer than with the new wave of web applications. All these
+              old economy barriers we are taking for granted as part of life, melt like butter in the wake of this
+              massive heat wave that is expanding at the speed of light from the super nova called the Internet. The
+              speed of development and deployment is so fast that it is exceeding the ability of most of us to absorb
+              and digest and then implement in our daily lives. The gap between the web life and the normal life is
+              growing so fast that a new culture exists out there to which most of us don't belong. The price to pay
+              for admission is spending at least 10 hours a day tracking everyone else to ensure you are still in the
+              race. In this world if you are not creating content you don't belong and what matters more than money is
+              your recognition by your peer group.</p>
+            <p>None of the traditional global businesses feel endangered by this new culture but there is a fundamental
+              decoupling of lifestyle and commerce taking place between the Web 2.0 crowd and the rest of the economy.
+              As the number of these global web users has reached a critical point we will start seeing commercial
+              ventures which owe their entire existence to their popularity and their connection to the future mass
+              crowds of web 2.0 users. It would be as difficult to unseat these new brand giants as it is impossible to
+              imagine that Coca Cola or Nike can loose their dominating lead today. But then if we knew it, it would
+              not happen.</p>
+            <p class="author">Alex Mashinsky April 2006.</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Globalization and its impact on the US economy and investments worldwide</div>
+          <div class="collapsible-body">
+            <p>"Think globally, act locally". This philosophy is becoming less and less possible in a world where not
+              only every product but every service has become a commodity. This rapid shift is slowly forcing the US
+              economy, traditionally the largest in the world to adjust to a new world order.</p>
+            <p>Globalization is certainly not a new phenomenon but its impact on the world economy has accelerated to
+              the point where global brands and low cost producers are increasingly dividing the spending dollars of
+              the world's consumers. We no longer care that products are made in China or Vietnam nor do we care if any
+              of their components or intellectual property was created in the US.</p>
+            <p>To its credit, the United States has been transforming itself into a services economy and has
+              successfully managed to retrain over 50 million workers to find new service jobs. By innovating and
+              leading the technology revolution the US continued to create value and expand the standard of living.
+              However, a dramatic change over the last three years has put the US at a cross roads. On one side
+              security and protectionism have caused the US borders to partially close to top talent and to foreign
+              made goods due to world events while on the other side the technological gap between the US and the new
+              Asian economies has steadily been shrinking. As the largest economy in the world the US can wait and do
+              nothing or even protect our lifestyle with tariffs and restrictions. History teaches us though that even
+              the largest world power that closes itself off from the world around them out of arrogance will quickly
+              lose their dominance and more importantly the talent that made them succeed in the first place. The
+              current trickle of talent going back to India and China will become a flood unless we change our policy
+              and accept the new world order in which being an aging service economy is not a sustainable competitive
+              advantage.</p>
+            <p>The telecom industry is a striking example of this phenomenon. After the 1996 US telecom deregulation
+              the FCC and the State Department began pressing the WTO (World Trade Organization) member nations to
+              lower international telephone rates and deregulate their telecom monopolies. This single act created a
+              second wave of globalization - the commoditization of services.</p>
+            <p>With a VOIP call to Bombay costing the same as a local call to New York the obstacle that kept many of
+              these developing nations from competing for services in the US &amp; Europe was eliminated. More and more of
+              the 100 million US workforces were forced to compete against almost one billion Indian, English speaking
+              workers who make less than $100 a month. It is my position that the only way the U.S. economy can survive
+              in such an environment is to transform ourselves again by creating new markets with new products and
+              services that will continue to attract the world's best talent to come and live in the USA. This painful
+              process will take 5-10 years and will eliminate 5-10 million low skill service jobs in countries around
+              the world.</p>
+            <p>How to transform ourselves is obviously the BIG question. Successful solutions and new markets reveal
+              themselves only through the natural selection of trial and error and of course, risk capital. Right now,
+              the US has global dominance in this area but that is about to change. As skilled US entrepreneurs go back
+              to China and India and tap a skilled workplace hungry to succeed in this new globalized workforce, it
+              will become more and more difficult for US companies to maintain their dominance.</p>
+            <p>The increasing ease of being able to move capital around the world freely and to pluck talent from so
+              many different regions will make it possible to create these new global businesses with relatively small
+              investments with very high growth rates which of course is the dream of any venture capitalist.</p>
+            <p>While most of the media and the investment community is focused on China's manufacturing miracle, this
+              century also belongs to India. As the world’s largest English speaking nation and the world’s largest
+              democracy it is bound to outpace China as it produces an increased number of components for the
+              globalized service economy with higher margins and sustainable competitive advantages that China may not
+              have.</p>
+            <p>Though it may take thirty years, it is my prediction that India will eventually take over as the world's
+              largest economic driver. What should the US try to do in that period of time? My suggestion is to keep
+              innovating and invest in India so that as a country, we can share the in the value and the profits which
+              will be created there in the next decade.</p>
+            <p class="author">Alex Mashinsky April 2004.</p>
+          </div>
+        </li>
+        <li class="">
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            The age of intelligent software</div>
+          <div class="collapsible-body" style="display: none;">
+            <p>In the eighties and nineties we saw standardization and commoditization of hardware, prices have tumbled
+              and we got to buy more of everything more often.</p>
+            <p>The first half of the 21 century will be dominated by the commoditization of software, driven by early
+              effort such as Java and Linux a new breed of open interoperable language for the internet will emerge, it
+              will incorporate XML, Semantic Web, web services and other initiatives which will for the first time
+              allow computers to dynamically transact with each other and allow logic and meaning to process the
+              content that was amassed on the internet in the past twenty years.</p>
+            <p>The significance of this transformation will only emerge as companies and individuals come to depend on
+              such functionality in their daily lives just as we depend on our email and cell phones today. Dynamic and
+              seamless Internet commerce will explode and will forever replace expensive and proprietary traditional
+              software we use today.</p>
+            <p>These new opportunities, emerging from this transformation will create new industry giants which will
+              lead the second wave of the internet boom. All of this innovation will not be possible if the
+              infrastructure built in the past decade did not secure the US as the country with the lowest
+              communication costs in the world.</p>
+            <p>The recent telecom debacle which has wiped $600b of investments and over 2 trillion dollars of equity
+              value is the foundation for the US service economy of the 21 century. America has invested billions in
+              its optical highways which guarantee a long supply of low cost digital oxygen to the internet and its
+              users. </p>
+            <p class="author">Alex Mashinsky Jan 2003.</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Management of networks Feb. 2000</div>
+          <div class="collapsible-body">
+            <p>The management of networks and information flows is going to be far more important and valuable than
+              owning the networks themselves.</p>
+            <p>The past 50 years of computing and telecommunications have been dedicated to the development of core
+              technologies, and to the build-up of infrastructure. The dawn of the Digital Age has led to an
+              overwhelming increase in the availability of information, both current information and the digitization
+              of data from the past 20 centuries, as well as the convergence of multiple information delivery networks.</p>
+            <p>While the build-out of infrastructure will continue the management of transport mediums and the
+              management of information delivery will become more important than the network itself.</p>
+            <p>Entirely new value chains will be created in the next 20 years that will dwarf the Yahoos and Cisco's of
+              today, they will enable managed peer-to-peer transactions via wire and wireless communications to be as
+              seamlessly integrated into our daily lives as electricity is now part of everything we do.</p>
+            <p>My focus is to create management solutions for these new networks and to position the companies offering
+              these solutions in the center of the new value chains. </p>
+            <p class="author">Alex Mashinsky February 2000.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2000-2017 Alex Mashinsky
+        <span class="right">The greatest risk is not taking one</span>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fmashinsky.com" title="Twitter settings iframe" style="display: none;"></iframe><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body>
+<body data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed="">
+  <header>
+   
+  </header>
+
+  <main>
+    <div class="container">
+      <h5><a href="#failed">See also Failed Ventures</a></h5>
+
+      <p>Alex has recorded a fair number of successes in his long-running journey as an entrepreneur and some of these
+        ventures are discussed below.</p>
+
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/celsius.png">
+              <span class="card-title"><a href="https://celsius.network/">Celsius</a></span>
+              Peer to Peer lending and borrowing of Crypto assets.
+            </div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/Z543pFBJq4c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+            <div class="card-action">
+              <div class="row" style="margin-bottom: 0">
+                <div class="col s6">Founded: 2017</div>
+                <div class="col s6 right-align">Status: Active</div>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href="../images/celsius.jpg"><img src="../images/celsius.jpg" width="40" height="57"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/gd_site.gif">
+              <span class="card-title"><a href="http://www.governingdynamics.com/">Governing Dynamics</a></span>
+              An Israeli-American venture fund specializing in scaling up Israeli startups in the US.
+            </div>
+            <div class="card-action">
+              <div class="row" style="margin-bottom: 0">
+                <div class="col s6">Founded: 2005</div>
+                <div class="col s6 right-align">Status: Active</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/groundlink.gif">
+              <span class="card-title"><a href="http://corporate.groundlink.com/">GroundLink (formerly LimoRes)</a></span>
+              A leading SaaS technology provider that aggregates, manages and executes ground travel services. Its
+              marketplace provides access to 45,000 ground travel vendors in 172 countries - the largest network of its
+              kind.
+              <br>Its state-of-the-art technology enables retail customers, web publishers, corporations and travel
+              agencies to easily find, price, book and pay for any ground travel.
+              <br>Groundlink received early-stage funding from&nbsp;The Comvest Group. It currently employs 200 employees
+              and reports more than $50 million in revenues.
+            </div>
+            <div class="card-action">
+              <div class="row" style="margin-bottom: 0">
+                <div class="col s6">Founded: 2005</div>
+                <div class="col s6 right-align">Status: Sold</div>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href="../images/gl_tomb.gif"><img src="../images/tw_s.gif" width="40" height="57"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/twireless.gif">
+              <span class="card-title"><a href="http://www.transitwireless.com">Transit Wireless</a></span>
+              <img class="responsive-img" src="../images/bloomberg_mayor.jpg">
+              (TW) exclusive provider of LTE, WiFi and other cellular phone coverage and wireless services to the 8.5
+              million daily commuters in the NYC subway system.
+              <br>As a neutral host, Transit Wireless operates the service on behalf of AT&amp;T, T-Mobile, Verizon and
+              Sprint.
+            </div>
+            <div class="card-action">
+              <div class="row" style="margin-bottom: 0">
+                <div class="col s6">Founded: 2003</div>
+                <div class="col s6 right-align">Status: Active</div>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href="../images/tw_b.gif"><img src="../images/tw_s.gif" width="40" height="57"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/sm_elematics.gif">
+              <span class="card-title"><a href="../pdf/ElematicsBackgrounder.pdf">Elematics</a></span>
+              The first virtualization software company to create the technology necessary to allow for real-time
+              provisioning and network management in a multi-carrier, multi-vendor environment. Elematics raised $23
+              million from Warburg Pincus.
+              <br>Alex served as the company’s Executive Chairman and Technology Architect until its sale in 2004.
+            </div>
+            <div class="card-action">
+              <div class="row" style="margin-bottom: 0">
+                <div class="col s6">Founded: 2001</div>
+                <div class="col s6 right-align">Sold: 5x (2004)</div>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href="../gif/qoptics1.gif" title=""><img src="../images/s_qoptics1.gif" alt=""></a>
+              <a href="../gif/qoptics2.gif" title=""><img src="../images/s_qoptics2.gif" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/sm_comgates.gif">
+              <span class="card-title"><a href="http://www.lightreading.com/document.asp?doc_id=45877&amp;site=lightreading">Comgates</a></span>
+              The world leader in media gateways and soft-switch technology, this company was spun-off of Arbinet in
+              1998.
+              <br><br>It went on to raise $13m in capital until it was sold to Telco in 2004.
+            </div>
+            <div class="card-action">
+              <div class="row" style="margin-bottom: 0">
+                <div class="col s6">Founded: 1997</div>
+                <div class="col s6 right-align">Sold: 2x (2004)</div>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href="../images/comgate.gif" title=""><img src="../images/s_comgate.gif" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/sm_arbinet.gif">
+              <span class="card-title"><a href="http://www.ptgi-ics.com">Arbinet - TheXchange</a></span>
+              This is the world's largest electronic marketplace for communications trading. It raised over $240m and
+              had over 130 employees and 1000 carriers who conducted over $500m in transactions via its platform.
+            </div>
+            <div class="card-action">
+              <div class="row" style="margin-bottom: 0">
+                <div class="col s6">Founded: 1995</div>
+                <div class="col s6 right-align">Sold: 10x (2010)</div>
+              </div>
+            </div>
+            <div class="card-action">
+              <a href="../images/arbinet3.gif" title=""><img src="../images/s_arbinet3.gif" alt=""></a>
+              <a href="../images/exchange2.gif" title=""><img src="../images/s_exchange2.gif" alt=""></a>
+              <a href="../images/exchange1.gif" title=""><img src="../images/s_exchange1.gif" alt=""></a>
+              <a href="../images/arbinet22.gif" title=""><img src="../images/s_arbinet2.gif" alt=""></a>
+              <a href="../images/arbinet1.gif" title=""><img src="../images/s_arbinet1.gif" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5><a name="failed">Failed Ventures</a></h5>
+
+      <p>As a maverick investor and entrepreneur, Alex has recorded many failures along with his successes, gleaning
+        more valuable lessons from the former. Alex assesses that there are many reasons that appropriated his
+        failures, many an underestimation of the time and money needed to implement the projects, as well as the level
+        of commitment and abilities of the companies’ management.</p>
+      <p>According to him, the hardest part thing with losses is learning to when to cut them off and admit to
+        mistakes. It all came full circle when the sage advice, "A focused mind is one of the most powerful forces in
+        the universe" came to Alex through a fortune cookie while at a local eatery in Manhattan. He realized that some
+        of his lessons took 20 years to learn.</p>
+
+      <h6>Alex’s own firms, 2008</h6>
+      <p>As the recession hit, Alex’s decision to leverage two of his ventures with debt turned disastrous as his
+        lenders refused to be patient. He lost all his equity in one of the ventures as the other got refinanced.</p>
+      <p>His takeaway from that event was to never put debt into early stage growth companies.</p>
+
+      <h6>The US Housing Market, 2006</h6>
+      <p>Alex had a good intuition prior to the housing market collapse and finally decided to bet against it by
+        shorting the home builders. He lost money in all of 2006 as the housing market continued to do well at that
+        time, and eventually he decided to cut his losses early in 2007.</p>
+      <p>He then went to watch home builders lose over 70% of their value in the following twelve months. He had failed
+        to make the connection between the home builders’ collapse to the collapse of the banking and financial system
+        which followed.</p>
+      <p>The lesson he learnt was to stick to his guts, especially when one has a track record of being right.</p>
+
+      <h6>Twitter, 2004</h6>
+      <p>Alex knew there was going to be a better way to publish new information on the internet so he wrote a patent
+        for publishing information in real-time to a list of followers.</p>
+      <p>At the same time, he had also started working on GroundLink and had to make a choice between the two ventures.
+        He chose GroundLink while the other idea turned into what came to be known as Twitter.</p>
+
+      <img src="../images/novocure.gif">
+      <h6><a href="http://www.novocure.com/">Novacure</a>, 2004</h6>
+      <p>Alex had the opportunity to invest in this revolutionary cancer treatment process but decided it was too
+        revolutionary.</p>
+
+      <img name="Skype" src="../images/skype-logo.gif">
+      <h6><a href="https://www.skype.com/intl/en/home">Skype</a>, 2002</h6>
+      <p>Alex had received a call from a VC asking about his opinion on a small startup doing a VOIP product. Since he
+        knew the space too well, he decided the prospects for the firm were not good and passed on it.</p>
+
+      <img name="ICG" src="../images/icg.gif">
+      <h6><a href="http://www.icg.com/about/">ICG, 1999</a></h6>
+      <p>Alex was the seed investor in Arbinet at the time and he received an invitation to purchase pre-IPO equity for
+        ICG. However, he wired the money too late to participate and ICG stock subsequently soared from $7 to $212 in
+        six months.</p>
+
+      <img name="Google" src="../images/google.gif">
+      <h6><a href="https://www.google.com/">Google</a>, 1998</h6>
+      <p>Alex was introduced to Sergey Brin by Ester Dyson, and after listening to his presentation of ‘how a
+        link-based algorithm could provide better search results,’ he regrettably said, "Who needs another search
+        engine? We have AltaVista!"</p>
+
+      <h6>Tradeum, 1998</h6>
+      <p>Alex was contracted to buy software at this firm. He even went on to negotiate the equity upside and
+        co-investment possibilities but he switched his mind at the last minute and the firm went on to be sold for
+        $1.2 billion the next year.</p>
+
+      <img name="ICQ" src="../images/icq.gif">
+      <h6><a href="https://www.icq.com/en">ICQ</a>, 1996</h6>
+      <p>Yosi Vardi offered Alex equity in his company as barter for bandwidth from Arbinet but he declined the
+        exchange and ICQ went on to sell to AOL for $450 million a mere eight months later.</p>
+
+      <img src="../images/VocalTech.gif">
+      <h6><a href="http://www.vocaltec.com/">Vocaltech</a></h6>
+      <p>Alex had the opportunity to invest in the company twice before their IPO but passed on the opportunity both
+        times.</p>
+    </div>
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2000-2017 Alex Mashinsky
+        <span class="right">The greatest risk is not taking one</span>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fmashinsky.com" title="Twitter settings iframe" style="display: none;"></iframe><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body>
+
+<body data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed="">
+  <header>
+    
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/diginex.png">
+              <span class="card-title">
+                <a href="https://www.diginex.com/" target="_blank">Diginex</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/globe.jpg" width="50%">
+              <span class="card-title">
+                <a href="http://metcalfesociety.org/" target="_blank">Metcalfesociety</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/redpen.gif">
+              <span class="card-title">
+                <a href="http://www.meetredpen.com/" target="_blank">Red Pen</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              Alex is an advisor for
+              <span class="card-title">
+                <a href="www.lendledger.com" target="_blank">LendLedger</a>
+              </span>
+              <a href="https://medium.com/lendledger/lendledger-announces-alex-mashinsky-as-newest-advisor-936dffc81a95">LendLedger Announces Alex Mashinsky as Newest Advisor</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              Alex is an advisor for
+              <span class="card-title">
+                <a href="https://www.radpay.com/" target="_blank">Radpay</a>
+              </span>
+              <a href="https://medium.com/@DanaFLove/radpay-appoints-blockchain-expert-alex-mashinsky-to-advisory-board-boosting-cryptocurrency-69e4fa9e09a8">Radpay Appoints Blockchain Expert Alex Mashinsky To Advisory Board, Boosting Cryptocurrency Expertise in Phoenix Startup</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              Alex is an advisor for
+              <span class="card-title">
+                <a href="https://ask.fm/" target="_blank">ASKfm</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/caratsio.png">
+              <span class="card-title">
+                <a href="https://www.carats.io/" target="_blank">Carats.io</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/vegannation.png" style="background-color: #000; padding: 5px">
+              <span class="card-title">
+                <a href="https://www.vegannation.io/" target="_blank">Vegan Nation</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              Alex is an advisor for
+              <span class="card-title">
+                <a href="https://www.gooroo.com/" target="_blank">Gooroo</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/uunio.png" style="background-color: #454bdb; padding: 5px">
+              <span class="card-title">
+                <a href="https://uun.io/" target="_blank">UUNIO</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/well.png">
+              <span class="card-title">
+                <a href="https://joinwell.com/" target="_blank">Well</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              Alex is an advisor for
+              <span class="card-title">
+                <a href="https://steemit.com/" target="_blank">Steemit</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/sirinlab.png" style="background-color: #999; padding: 5px">
+              <span class="card-title">
+                <a href="https://sirinlabs.com/" target="_blank">SirinLabs</a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/swift_shift.png">
+              <span class="card-title">
+                <a href="https://www.swiftshift.com/" target="_blank">Swift Shift</a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/logo_novatel.png">
+              <span class="card-title">Novatel</span>
+              Alex served as a board member from 2014 till 2015
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/dollarphone.jpg">
+              <span class="card-title"><a href="http://www.dollarphone.com/" target="_blank">DollarPhone</a></span>
+              Alex has been a board member of DollarPhone since 2013
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/tellabs.gif">
+              <span class="card-title"><a href="https://finance.yahoo.com/news/tellabs-third-avenue-reach-agreement-160000803.html" target="_blank">Tellabs</a></span>
+              Alex served on the board for Tellabs in 2013
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/cvidia.gif">
+              <span class="card-title"><a href="http://www.cvidya.com/" target="_blank">cVidya</a></span>
+              Alex has been on the advisory board of cVidya since 2005
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/arbinetLogo.gif">
+              <span class="card-title">Arbinet</span>
+              Alex served as Founder, CEO, Chairman and then Board Member for Arbinet during 1995 – 2010
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2000-2017 Alex Mashinsky
+        <span class="right">The greatest risk is not taking one</span>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fmashinsky.com" title="Twitter settings iframe" style="display: none;"></iframe><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div></body>
+
+<body data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed="">
+  <header>
+    
+  </header>
+
+  <main>
+    <div class="container">
+      <ul class="collapsible" data-collapsible="accordion">
+        <li class="active">
+          <div class="collapsible-header active"><i class="material-icons">expand_more</i>
+            Alex Mashinsky (Celsius) on How to bring 100 million users onto the blockchain | TNW Conference 2018
+          </div>
+          <div class="collapsible-body" style="display: block;">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/gUgYLF5L384" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Интервью из Сан-Франциско с Alex Mashinsky CEO проекта The Celsius Network
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/RdGKVnSanyI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex Mashinsky, Celsius | Blockchain week NYC 2018
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/4HEiGImsPGc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Live from TokenFest with Alex &amp; Eric Ly (Co-founder of Linkedin)
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/xRqtBRSAFcI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            What it's really like to be a CEO in Crypto days before launching a successful ICO
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/Hsrchn1W-BU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Celsius on CNBC with Crypto Trader
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/NCcU1c8741k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Celsius brings HODL to Consensus 2018
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/WVGdPoVJkvY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Milken Institute | Crypto Brawl Highlights
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/heJxZb_8GR8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Is supply chain another public blockchain killer app
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/Zj1wwpFgHMs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Milken: Is Crypto a SCAM?
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/MMZGQSWD4tU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Consensus interview: Why Crypto is the future
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/4HEiGImsPGc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Cryptoho.us: How decentralization is going to replace centralized toll collectors
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/ZNOQNLvcLpw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Celsius Final
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/rOr4BeWvJPw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">play_arrow</i>
+            Alex Mashinsky: Borrowing with Bitcoin; Banking for the 21st Century
+            <audio controls="">
+              <source src="http://dts.podtrac.com/redirect.mp3/traffic.libsyn.com/hiddenforces/DK_2-26-18_Alex_Mashinsky_Ep.35_-_Fixed_Full_Episode.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex Mashinsky - CEO of Celsius Network on BlockChain ICO 2.0
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/1v09BJQV4V8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex Mashinsky at FinTech World Panel
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/1jod0DIPmaM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            How will ETH value go up
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/9Khj9lRvl64" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Celsius on CNBC
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/9RcFi-rJkpc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex Mashinsky: Peer To Peer Lending
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/ujBLuMDpnBs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex Mashinsky. Cryptospace Conference Moscow 2017 Dec
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/J7ql5mJUjm0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex Mashinsky. What will the ICO survivors look like
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/IKj6nc0Wz5k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            CELSIUS
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/psnCbNrYTYg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            BlockTalks Live
+          </div>
+          <div class="collapsible-body">
+            <video class="responsive-video" controls="">
+              <source src="../movie/blocktalks.mp4" type="video/mp4">
+            </video>
+          </div>
+        </li>
+        <!--dec.2017.-->
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Discussion on the current state of IoT
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/ytDlTr3KBP0" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+            <p>Ingenu CEO John Horn, Novatel Wireless Director &amp; CEO Alex Mashinsky and Diego Borrego, Morey
+              Corporation CTO,
+              take part in a panel discussion on the current state of IoT, and where they believe the sector is moving.</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex speaks with equities.com about Novatel’s operations and its growth prospects
+          </div>
+          <div class="collapsible-body">
+            <video class="responsive-video" controls="">
+              <source src="https://s3.amazonaws.com/equitiesmediastream/Rodman-2015/Novatel.mp4" type="video/mp4">
+            </video>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex speaks with equities.com about Novatel’s transition into IoT
+          </div>
+          <div class="collapsible-body">
+            <video class="responsive-video" controls="">
+              <source src="http://www.governingdynamics.com/tbs/video/novatel-wireless-alex-mashinsky-2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex’s appearance on The Street, in November 2014, speaking about Novatel’s success with MiFi and IoT
+          </div>
+          <div class="collapsible-body">
+            <video class="responsive-video" controls="">
+              <source src="http://www.governingdynamics.com/tbs/video/turnaround_nearly_complete.mp4" type="video/mp4">
+            </video>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex’s appearance on Bloomberg TV in April 2013 discussing the wireless NYC subway system
+          </div>
+          <div class="collapsible-body">
+            <video class="responsive-video" controls="">
+              <source src="http://www.governingdynamics.com/tbs/video/DOcJ-FxaFrRg4gtDIwOjEzYzowODE7Rm.mp4" type="video/mp4">
+            </video>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex’s presentation at the NJ Tech Meetup in 2012 as he presents his idea that “the greatest risk is not
+            taking one.”
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/uWuBBDiRGqM" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex’s appearance on Bloomberg TV in 2010
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/Z-quhLTcNt4" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+            <p>Alex’s appearance on Bloomberg TV in 2010, speaking about GroundLink. He discusses the possibility of
+              Wi-Fi connected ground transportation and the reinvention of the internet.</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex’s 5-minute speech at the PhoCusWright (PCW) Conference in 2010
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/nu8LfJg4eEY" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex’s interview on GroundLink in PCW 2009
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/jhH-GP0TWfI" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex’s Beet.tv appearance speaking about the state of the Internet in 2008
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/LQ6ZzR3hZe8" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <!--<li>-->
+        <!--<div class="collapsible-header "><i class="material-icons">expand_more</i>-->
+        <!--Alex’s presentation on Arbinet in PCW 2001-->
+        <!--</div>-->
+        <!--<div class="collapsible-body">-->
+        <!--<div class="video-container">-->
+        <!--<embed type="application/x-shockwave-flash" src="http://embed.5min.com/489002738/&amp;sid=724&amp;autoStart=false&amp;hasCompanion=true&amp;cbLocation=custom&amp;cbCustomID=mc_Middle" width="100%" height="100%" style="undefined" id="FiveminPlayer" name="FiveminPlayer" bgcolor="#000000" quality="high" wmode="transparent" allowfullscreen="true" allowscriptaccess="always">-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex’s Keynote speech at the PWC telecom event in Paris 2001
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/lvnu_t-d6Fo" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Einstein Medal Award Winner in 2001, Alex discusses winning the award and the reasons why he moved to the
+            US
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/Arxw69RR22c" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">expand_more</i>
+            Alex speaking about Arbinet in an interview on CNN in 1997
+          </div>
+          <div class="collapsible-body">
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/7ECLrvHIHCQ" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2000-2017 Alex Mashinsky
+        <span class="right">The greatest risk is not taking one</span>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fmashinsky.com" title="Twitter settings iframe" style="display: none;"></iframe><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body>
+
+  <main>
+    <div class="container">
+      <p>Alex's thoughts on exchanges, VOIP, routing and traffic management have been published in:</p>
+      <ol>
+        <li>The 2001
+          <a href="../documents/ExchangeIsGood.pdf">SG&amp;A White Paper</a>
+          for the Price Waterhouse Coopers InfoComm Review. He predicted of the collapse of the telecom sector and its
+          need for consolidation and profitability at the time.</li>
+        <li>A White Paper on VOIP from IEEE</li>
+        <li>A White Paper on Bandwidth Trading</li>
+        <li>A Harvard Business School 2001 case study (number 9-201-006) where Arbinet’s fund-raising process was
+          chronicled.</li>
+        <li>The Telecommunications Industry book published in 2002, to be found at:
+          <a href="http://www.insidetheminds.com/">www.insidetheminds.com</a>. In it, he wrote a chapter on managing
+          communications</li>
+      </ol>
+      <p>Following is a list of short descriptions of topics Alex has been working on over the years:</p>
+
+      <ul class="collapsible" data-collapsible="accordion">
+        <li class="active">
+          <div class="collapsible-header truncate active"><i class="material-icons">expand_more</i> Discovery (2011)</div>
+          <div class="collapsible-body" style="display: block;">
+            <p>“The process of discovering something new is extremely unique and satisfying. We get great joy learning
+              new things but discovering something you think no one knows has extreme exhilaration and such strong and
+              unique feeling that after you have experienced it once you are willing to go to the end of the world to
+              experience it again. It’s hard to explain why it is so and I am sure this is truer for some than for
+              others but it’s a special feeling that for me will always count among the best moments of my entire life.</p>
+            <p> was lucky enough to have experienced these moments several times as I explored new industries and
+              ideas. Many times, even before such ideas were verified as correct or checked for prior art or other
+              similar discoveries my gut already knew them to be so and I knew I was facing the truth, I got to see
+              gods work in pure and simple formulas or process of how something works or behaves.</p>
+            <p>When you read about some of the greatest discoverers of all times and their passion and dedication to
+              solve a single riddle it’s hard not to admire such man and women of science and want to be one of them.
+              Most of us think that we are not capable of such discoveries or that the ideas we have can’t be correct
+              but when an idea comes to us in the middle of the night or when facing something new we mostly let such
+              moments of discovery pass us by. We all have the skill but we don't all have the patience or the
+              attention it requires and we need to develop these skills to explore and discover.</p>
+            <p>When I give talks I often hear that most of what was there to be discovered was already discovered, I
+              can assure you that this is not correct. We double our knowledge faster than ever before which means we
+              discover and invest faster than ever before. all it takes to recognize such change is to watch a
+              10-year-old movie and see how far we have come in such a short time.”</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header truncate"><i class="material-icons">expand_more</i> DNA Evolution (2004)</div>
+          <div class="collapsible-body">
+            <p>“It is a proven fact that both simple one cell and multi-cell creatures gain knowledge and new ideas
+              from one another by exchanging DNA. They also adopt DNA from the food they eat. Over time as species
+              evolved and became more complicated they had less to gain from other species and began to only exchange
+              within their own hierarchy, eventually narrowing the exchange even further to sub species with higher
+              intelligence. To date the key difficulty in the DNA evolution remains to be how to transfer the
+              fundamental memories and patterns each creature’s genes has created and perfected to defend themselves to
+              the next generation for the evolution process to perpetuate itself.</p>
+            <p>Species of higher intelligence use Protein-based stored procedures in addition to DNA-based instincts
+              which are essentially stored pre-programmed patterns encapsulated in different levels of the brain that
+              transfer basic knowledge from one generation to the next. Mitochondrion DNA, a symbiotic companion of
+              humans, generating cells from the dawn of civilization is doing the same thing but in its own separate
+              evolutionary world by transferring itself from one generation to the next via the female gender without
+              sex and based strictly on mutations generated by a single strain of family heritage.”</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header truncate"><i class="material-icons">expand_more</i> Our brain and invention -
+            (2003)</div>
+          <div class="collapsible-body">
+            <p>“The human brain’s single most important function is to predict the immediate next event through one of
+              our six senses. When a person reads something, or listens to someone, their brain is instinctively making
+              a prediction of what the idea or conversation is going to be about. If what is then heard or seen is not
+              what the brain had predicted the brain is surprised and instantly works to rationalize or accept the new
+              input. The filter we apply at this critical step is the differentiating factor between creative people
+              and those who just follow others. Most people, instead of accepting the new input, will work harder not
+              to diverge from the original idea, immediately reverting to the idea or topic presented, thereby
+              preventing their brain to continue to predict other new outcomes or solutions. Should the person allow
+              their brain to continue to accept the new information and put aside what was predicted, new solutions and
+              ideas emerge.</p>
+            <p>The brain will then test such ideas against what it believes is possible to make sure it observes the
+              variety of rules and restrictions the brain currently possesses. These new ideas are then added to the
+              pool of possible predictions for future scenarios enabling a person to have a greater source of possible
+              outcomes.</p>
+            <p>Most people do not do anything with such inventions or unique predictions and will not let their brains
+              go the distance and truly invent new things. The few that do venture that far do not have the confidence
+              to believe that they may be on to something completely new. Most the remaining people do not believe they
+              are the first ones to think of the idea and just let it fade away after a few minutes. A small subset of
+              mostly determined, self-confident people are hit by the invention bug and do not let such thoughts die
+              until they find a way to implement them or test them out.</p>
+            <p>Invention is very different from discovery. The discovery process involves mostly gathering enough facts
+              or using new tools to explain or observe something no one has seen before such as with the discovery of
+              the elements in the periodic table or discovering the genome. Invention requires the highest level of
+              cortex based thinking and is only effective if you create something very different from anything that
+              already exists. Our brains are not programmed to do that because we routinely train them to do the same
+              tasks again and again and again.”</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header truncate"><i class="material-icons">expand_more</i> History of digital and
+            analog communications (2001)</div>
+          <div class="collapsible-body">
+            <p>“The invention of the telegraph heralded the world’s first form of digital communications, surpassing
+              the Morse code which consisted of only two type of signals, 0 and 1. With the additional development of
+              the microphone and speakers as well as switching systems, the network transitioned to analog
+              communications until the semiconductor and software caught up with it in the late 1970s and the networks
+              started to digitize. Today almost all communications systems are digital but our input is still analog
+              and will stay so for quite a while. The slow progress made in creating digital interfaces between the
+              brain and our computer input sources is the main stumbling block to move computing to the next level.”</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header truncate"><i class="material-icons">expand_more</i> Migration from cell based
+            DNA communication to Engineered DNA (1997)</div>
+          <div class="collapsible-body">
+            <p>“For the past 4 billion years transferring information from one living cell to another was done via
+              genetic mitosis which included intentional and unintentional changes in the genes. Over the past 3000
+              years, humans evolved to transfer information verbally as well as through the written word, thus
+              shortening the cycle dramatically. More recently digital communications have allowed us the ability to
+              instantly transfer information to any point in the globe. Each step in this evolutionary process was a
+              ten-fold improvement on the previous generations’ best solution and was adopted rapidly. Today we are the
+              first generation to be smart and knowledgeable enough to redesign and improve our DNA based formulation
+              and to have computers that are powerful enough to simulate the results of such improvements. This
+              advanced development will eventually lead to an environment where organic and electronic systems merge,
+              taking advantage of the strength of each system and moving our existence for the first time to a
+              bio-electric state, breaking mental and intellectual barriers and elevating mankind’s abilities to new
+              levels.”</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2000-2017 Alex Mashinsky
+        <span class="right">The greatest risk is not taking one</span>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fmashinsky.com" title="Twitter settings iframe" style="display: none;"></iframe><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body>
+
+ <main>
+    <div class="container">
+      <h5>Since 1993 Alex has filed over 50 patents, they include pioneering work in many fields including:</h5>
+      <ol>
+        <li><a href="https://www.google.com/patents?id=w-qBAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">VOIP</a>
+          - Skype, Google, AT&amp;T, Verizon, Sprint, 1994</li>
+        <li><a href="https://www.google.com/patents?id=rk4EAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">Click
+            to call technolog</a>y Amazon, AT&amp;T, Google 1995</li>
+        <li>B2B exchanges</li>
+        <li><a href="https://www.google.com/patents?id=I0rRAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">Soft-switching
+            and distributed call processing technologies ACMEpacket 1996</a></li>
+        <li><a href="https://www.google.com/patents?id=a2aAAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">Bandwidth-trading</a>
+          and real-time bandwidth-management</li>
+        <li><a href="https://www.google.com/patents?id=MHazAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">Management
+            of discounts on the web</a> - Groupon, LivingSocial 2006</li>
+        <li><a href="https://www.google.com/patents?id=dVSgAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">Publishing
+            of new content on the internet</a> - Twitter, Facebook, Linkedin 2004</li>
+        <li><a href="https://www.google.com/patents?id=amXxAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">Advertising
+            Exchanges</a> AdBrite, AdECN</li>
+        <li><a href="https://www.google.com/patents?id=UgvgAQAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">Trading
+            in Electrical power 2001</a></li>
+        <li><a href="https://www.google.com/patents?id=0RToAQAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">Transfer
+            of electrical power without wires</a>.</li>
+        <li><a href="https://www.google.com/patents?id=zuqtAAAAEBAJ&amp;printsec=abstract#v=onepage&amp;q&amp;f=false" target="_blank">Apple/Android
+            App Store</a></li>
+        <li><a href="https://www.google.com/patents?id=tL3WAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">Charging
+            EV without wires</a>.</li>
+      </ol>
+
+      <h5>Please click on a link below to view the details of the following issued patents: </h5>
+      <p>U.S. Patent Number, Date Issued, Patent Title</p>
+      <dl>
+        <dt><a href="https://www.google.com/patents/US9697575" target="_blank">9,697,575</a> July 4, 2017</dt>
+        <dd>Trading in electric power</dd>
+        <dt><a href="https://www.google.com/patents/US9569805" target="_blank">9,569,805</a> Feb 14, 2017</dt>
+        <dd>Intelligent routing of electric power</dd>
+        <dt><a href="https://www.google.com/patents/US9338190" target="_blank">9,338,190</a> May 10, 2016</dt>
+        <dd>System and method of managing multimedia communications across convergent networks</dd>
+        <dt><a href="http://www.uspto.gov/web/patents/patog/week46/OG/html/1408-3/US08890472-20141118.html" target="_blank">8,890,472</a>
+          Sep 16, 2010</dt>
+        <dd>Self-charging electric vehicles and aircraft, and wireless energy distribution system</dd>
+        <dt><a href="https://www.google.com/patents?id=UgvgAQAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">7,945,502</a>
+          May 17, 2011</dt>
+        <dd>Online trading and dynamic routing of electric power among electric service providers</dd>
+        <dt><a href="https://www.google.com/patents?id=amXxAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">7,856,378</a>
+          December 21, 2010</dt>
+        <dd>Method and system for facilitating trading of media space</dd>
+        <dt><a href="https://www.google.com/patents?id=HOPRAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">7,751,548</a>
+          July 6, 2010</dt>
+        <dd>System and method for facilitating targeted marketing over a telecommunications network</dd>
+        <dt><a href="https://www.google.com/patents?id=I0rRAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">7,724,879</a>
+          May 25, 2010</dt>
+        <dd>Efficient communication through networks</dd>
+        <!--
+                <dt><a href="http://www.google.com/patents?id=XA3LAAAAEBAJ&printsec=abstract&zoom=4#v=onepage&q&f=false" target="_blank">7,636,349</a> December 22, 2009</dt>
+                <dd>System and method for providing shared line appearances in a distributed call routing network</dd>
+                -->
+        <dt><a href="https://www.google.com/patents?id=JgrJAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">7,600,029</a>
+          October 6, 2009</dt>
+        <dd>System and method for generating, monitoring and reporting performance information relating to data
+          transmissions</dd>
+        <dt><a href="https://www.google.com/patents?id=hTW_AAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">7,515,697</a>
+          April 7, 2009</dt>
+        <dd>Method and a system for settlement of trading accounts</dd>
+        <dt><a href="https://www.google.com/patents?id=w-qBAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">7,269,247</a>
+          September 11, 2007</dt>
+        <dd>Efficient communication through networks </dd>
+        <dt><a href="https://www.google.com/patents?id=a2aAAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">7,236,575</a>
+          June 26, 2007</dt>
+        <dd>System and method for IP bandwidth trading </dd>
+        <dt><a href="https://www.google.com/patents?id=pl0VAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,912,277</a>
+          June 28, 2005</dt>
+        <dd>Assigning telecommunications services to matchable classes</dd>
+        <dt><a href="https://www.google.com/patents?id=QEoSAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,731,729</a>
+          May 4, 2004</dt>
+        <dd>Method and a system for settlement of trading accounts</dd>
+        <dt><a href="https://www.google.com/patents?id=i9wOAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,553,115</a>
+          April 22, 2003</dt>
+        <dd>Automated access telephone system</dd>
+        <dt><a href="https://www.google.com/patents?id=-M4OAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,542,588</a>
+          April 1, 2003</dt>
+        <dd>Method and system for global communications network management and display of market-price information</dd>
+        <dt><a href="https://www.google.com/patents?id=Xm4LAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,496,579</a>
+          December 17, 2002</dt>
+        <dd>Method of and system for efficient use of telecommunication networks</dd>
+        <dt><a href="https://www.google.com/patents?id=dKkLAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,442,258</a>
+          August 27, 2002</dt>
+        <dd>Method and system for global telecommunications network management and display of market-price information</dd>
+        <dt><a href="https://www.google.com/patents?id=fQgLAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,343,073</a>
+          January 29, 2002</dt>
+        <dd>Method and system for efficient link utilization</dd>
+        <dt><a href="https://www.google.com/patents?id=h6UGAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,226,365</a>
+          May 1, 2001</dt>
+        <dd>Method and system for global communications network management and display of market-price information</dd>
+        <dt><a href="https://www.google.com/patents?id=D-QGAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,188,756</a>
+          February 13, 2001</dt>
+        <dd>Efficient communication through networks</dd>
+        <dt><a href="https://www.google.com/patents?id=71kGAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,144,727</a>
+          November 7, 2000</dt>
+        <dd>Method and system for global telecommunications network management and display of market-price information</dd>
+        <dt><a href="https://www.google.com/patents?id=rk4EAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,088,436</a>
+          July 11, 2000</dt>
+        <dd>Automated callback system</dd>
+        <dt><a href="https://www.google.com/patents?id=oEUEAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,078,654</a>
+          June 20, 2000</dt>
+        <dd>Method of and system for efficient use of telecommunication networks</dd>
+        <dt><a href="https://www.google.com/patents?id=KKkXAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">6,005,926</a>
+          December 21, 1999</dt>
+        <dd>Method and system for global communications network management</dd>
+        <dt><a href="https://www.google.com/patents?id=iDkYAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">5,825,872</a>
+          October 20, 1998</dt>
+        <dd>Portable automated dialer with tone completion indicator</dd>
+        <dt><a href="https://www.google.com/patents?id=ykkbAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">5,710,809</a>
+          January 20, 1998</dt>
+        <dd>Method of and system for efficient use of telecommunication voice networks</dd>
+        <dt><a href="https://www.google.com/patents?id=QUsoAAAAEBAJ&amp;printsec=abstract&amp;zoom=4#v=onepage&amp;q&amp;f=false" target="_blank">5,694,464</a>
+          December 2, 1997</dt>
+        <dd>Automated access telephone system</dd>
+        <dt><a href="https://www.google.ch/patents/US5217653" target="_blank">5,217,653</a> Jun 8, 1993</dt>
+        <dd>Method and apparatus for producing a stepless 3-dimentional object by stereolithography</dd>
+        <dt>GB2336068</dt>
+        <dd>Telecommunications Networks</dd>
+        <dt><a href="https://www.google.ch/patents/CA2451042">2,451,042</a> Jan 3, 2003</dt>
+        <dd>Method and apparatus for provisioning a communication path</dd>
+      </dl>
+
+      <h5>THOMAS JEFFERSON ON PATENTS</h5>
+      <p>If nature has made any one thing less susceptible than all others of exclusive property, it is the action of
+        the thinking power called an idea, which an individual may exclusively possess as long as he keeps it to
+        himself; but the moment it is divulged, it forces itself into the possession of every one, and the receiver
+        cannot dispossess himself of it. Its peculiar character, too, is that no one possesses the less, because every
+        other possesses the whole of it. He who receives an idea from me, receives instruction himself without
+        lessening mine; as he who lights his taper at mine, receives light without darkening me.</p>
+      <p>That ideas should freely spread from one to another over the globe, for the moral and mutual instruction of
+        man, and improvement of his condition, seems to have been peculiarly and benevolently designed by nature, when
+        she made them, like fire, expansible over all space, without lessening their density in any point, and like the
+        air in which we breathe, move, and have our physical being, incapable of confinement or exclusive
+        appropriation. Inventions then cannot, in nature, be a subject of property.</p>
+      <p>Society may give an exclusive right to the profits arising from them, as an encouragement to men to pursue
+        ideas which may produce utility, but this may or may not be done, according to the will and convenience of the
+        society, without claim or complaint from anybody. Accordingly, it is a fact, as far as I am informed, that
+        England was, until we copied her, the only country on earth which ever, by a general law, gave a legal right to
+        the exclusive use of an idea. In some other countries it is sometimes done, in a great case, and by a special
+        and personal act, but, generally speaking, other nations have thought that these monopolies produce more
+        embarrassment than advantage to society; and it may be observed that the nations which refuse monopolies of
+        invention, are as fruitful as England in new and useful devices.</p>
+      <p class="author">Letter from <a href="http://press-pubs.uchicago.edu/founders/documents/a1_8_8s12.html" target="_blank">Thomas
+          Jefferson to Isaac McPherson</a></p>
+    </div>
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2000-2017 Alex Mashinsky
+        <span class="right">The greatest risk is not taking one</span>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fmashinsky.com" title="Twitter settings iframe" style="display: none;"></iframe><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body>
+
+<main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/top10.jpg">
+              <span class="card-title"><a href="https://www.forbes.com/sites/andrewrossow/2018/07/10/top-10-new-blockchain-companies-to-watch-for-in-2018/#3092fe6b5600">Forbes</a></span>
+              10 New Blockchain Companies To Watch For In 2018.
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/hubspot.png">
+              <span class="card-title"><a href="https://blog.hubspot.com/marketing/blockchain-companies">HubSpot</a></span>
+              11 Blockchain Companies You Should Be Paying Attention To
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/ibinex.png" style="background: #000; padding: 3px">
+              <span class="card-title"><a href="https://news.ibinex.com/2018/09/10/top-5-new-blockchain-projects/">IBINEXNEWS</a></span>
+              Top 5 New Blockchain Projects
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/datamation.jpg">
+              <span class="card-title"><a href="https://www.datamation.com/data-center/20-top-blockchain-companies.html">Datamation</a></span>
+              20 Top Blockchain Companies
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/icoalert.png">
+              <span class="card-title"><a href="https://info.icoalert.com/top-40-alex-mashinsky">IcoAlert</a></span>
+              Top 40 Blockchain Influencers of 2018
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/e_and_y2011eoy.gif">
+              <span class="card-title"><a href="https://online.wsj.com/article/PR-CO-20110510-910741.html">Ernst &amp; Young</a></span>
+              Alex was nominated to be a finalist for the 2002 and 2011 E&amp;Y Entrepreneur of the Year Award.
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/icfaward2010.jpg">
+              <span class="card-title">InterContinental Magazine</span>
+              InterContinental Magazine had selected one of Alex’s companies as their Top Venture Firm of North America
+              based on its transactions and its portfolio of ideas and companies.
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/businessinsider.gif">
+              <span class="card-title"><a href="http://www.businessinsider.com/sa100-2010#alex-mashinsky-31">Business
+                  Insider</a></span>
+              Alex was listed in the Business Insider’s “The Silicon Alley 100: New York’s Coolest Tech People” in 2010
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/crains.gif">
+              <span class="card-title"><a href="http://mycrains.crainsnewyork.com/small_business_awards/profiles/2010/214">Crain</a></span>
+              Alex, as head of LimoRes, was selected as one of Crain’s Top Entrepreneurs in 2010
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/inc.gif">
+              <span class="card-title">Inc500</span>
+              LimoRes was selected as one of America’s fastest growing companies in 2008
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/top100.jpg">
+              <span class="card-title"><a href="http://www.tmcnet.com/voip/1006/top-voices-of-ip-communications.htm">Internet
+                  Telephony</a></span>
+              Alex’s VOIP innovation was recognized by Internet Telephony magazine in its list of Top 100 VOIP
+              Communications
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/HarvardBusinessSchoolClub.jpg">
+              <span class="card-title">HBSC</span>
+              Alex was a semi-finalist at the HBSC 2002 Awards
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/Forbesb2bcover.gif">
+              <span class="card-title">Forbes</span>
+              Alex’s company, Arbinet-theXchange was selected as “Best B2B for Telecommunications” by Forbes Magazine
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/Grouppicture.jpg">
+              <span class="card-title">Einstein Technology Medal</span>
+              In 2001, Alex received the prestigious Einstein Technology Medal. It was presented to him by Israeli
+              Prime Minister Benjamin Netanyahu
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/telecom.jpg">
+              <span class="card-title"><a href="technology_foresight.html">Technology Foresight Award</a></span>
+              Technology Foresight Award from the Wall Street Journal and WCA at the International Telecommunications
+              Union’s Telecom ’99 event
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/starofindustrycom.jpg">
+              <span class="card-title">Computer Telephony Magazine</span>
+              In 1997, Alex received the “Star of the Industry” award from the Computer Telephony Magazine for building
+              the world’s largest PC switch and the world’s first soft-switch
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/harvard.gif">
+              <span class="card-title">Harvard Business School</span>
+              In 2000, Harvard Business School published a business case on Arbinet-theXchange
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l4">
+          <div class="card">
+            <div class="card-content">
+              <img class="responsive-img" src="../images/infoweek_small.gif">
+              <span class="card-title">InformationWeek</span>
+              Arbinet-theXchange was ranked in the Top 100 E-Business Innovator list
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2000-2017 Alex Mashinsky
+        <span class="right">The greatest risk is not taking one</span>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fmashinsky.com" title="Twitter settings iframe" style="display: none;"></iframe><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body>
+
+ <main>
+    <div class="container">
+      <p>Alex Mashinsky
+        and the companies he has built have been featured in such publications
+        as Forbes, the New York Times, Business Week, and The Economist,
+        as well as numerous trade journals. Some articles and videos that
+        highlight some of Alex's thinking and accomplishments:</p>
+
+      <h5><a href="#events">See Events</a></h5>
+
+      <div id="press" class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://blocklr.com/news/tech-giants-building-cryptocurrency-companies/">20 Tech Giants Building Cryptocurrency Companies</a>
+                </span>
+                November 7, 2018
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/skannerup.jpg">
+                <span class="card-title">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:6406783629934108672">Alex gives interview to William Skannerup</a>
+                </span>
+                May 28, 2018
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/bloomberg.png">
+                <span class="card-title">
+                    <a href="https://www.bloomberg.com/news/articles/2018-05-02/a-verbal-cryptobrawl-breaks-out-at-milken-over-bitcoin-s-future">A Verbal Cryptobrawl Breaks Out at Milken Over Bitcoin's Future</a>
+                </span>
+                May 2, 2018
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/nypost.png">
+                <span class="card-title">
+                    <a href="https://nypost.com/2018/05/02/nouriel-roubini-says-bitcoin-is-bulls-t">Nouriel Roubini says Bitcoin is ‘bulls–t’</a>
+                </span>
+                May 2, 2018
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/fortune.png">
+                <span class="card-title">
+                    <a href="http://fortune.com/2018/05/02/milken-conference-institute-2018/">A Verbal Cryptobrawl Broke Out at the Milken Institute Global Conference</a>
+                </span>
+                May 2, 2018
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/cointelegraph.png">
+                <span class="card-title">
+                    <a href="https://cointelegraph.com/news/dr-doom-slams-cryptocurrencies-says-talk-of-decentralization-is-bullst">‘Dr. Doom’ Slams Cryptocurrencies, Says ‘Talk Of Decentralization Is Bulls**t’</a>
+                </span>
+                May 4, 2018
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/vanityfair.png">
+                <span class="card-title">
+                    <a href="https://www.vanityfair.com/news/2018/05/silicon-valley-sees-dollar-signs-in-the-ai-apocalypse">“THE OPPORTUNITY HAS NEVER BEEN RICHER”: SILICON VALLEY SEES DOLLAR SIGNS IN THE A.I. APOCALYPSE</a>
+                </span>
+                May 2, 2018
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://tokenfest.io/">Token Fest</a>
+                </span>
+                Mar. 15-16, 2018. San Francisco, CA
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://www.bitcoinsuperconference.com/">Bitcoin, Ethereum &amp; Blockchain SuperConference</a>
+                </span>
+                Feb. 16-18, 2018. Dallas, TX
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    Cayman Finance
+                </span>
+                Jan. 16, 2018. New York, NY
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://www.eventbrite.com/e/blocktalks-tickets-39377764955">BlockTalks</a>
+                </span>
+                Dec. 19, 2017. New York, NY
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://www.eventbrite.com/e/demo-day-breakfast-blockchainmix-new-trends-investment-opportunities-tickets-40874907950?aff=es2">Demo Day Breakfast &amp; BlockchainMix: New Trends, Investment Opportunities</a>
+                </span>
+                Dec. 15, 2017. New York, NY
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/chipin.png">
+                <span class="card-title">
+                    <a href="https://www.chipin.com/celsius-ceo-alex-mashinsky-interview/">Meet the Boss – Exclusive Interview with Celsius CEO Alex Mashinsky</a>
+                </span>
+                Dec. 14, 2017. New York, NY
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://fintechfest.splashthat.com/">Rise FinTech Fest</a>
+                </span>
+                Dec. 13, 2017. New York, NY
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://globalops2017.com/">GlobalOps 2017</a>
+                </span>
+                Dec. 12-13, 2017. New York, NY
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://www.eventbrite.com/e/geektime-blockchain-summit-tickets-39685721060?ref=eios&amp;aff=eios">Geektime Blockchain Summit</a>
+                </span>
+                Dec. 10, 2017. Tel Aviv, Israel
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="http://cryptospace.moscow">Crypto Space</a>
+                </span>
+                Dec. 8, 2017. Moscow, Russia
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://www.sosanyc.co/so/7M0Z5SBj#/main">Israeli-Serb Tech Meetup</a>
+                </span>
+                Dec. 6, 2017. New York, NY
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="http://www.digital.nyc/events/december-6-bereisheet-tech-nyc-event">Bereisheet Tech NYC</a>
+                </span>
+                Dec. 6, 2017. New York, NY
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="http://tokensummit.com/">Token Summit</a>
+                </span>
+                Dec. 4-5, 2017. San Francisco, CA
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://www.meetup.com/Morris-Meetup/events/244551265/">2017 Block &amp; Coin Summit: NAVIGATING THE CRYPTOCONOMY</a>
+                </span>
+                Dec. 4, 2017. Morristown, NJ
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://blockchain-expo.com/northamerica/">Blockchain Expo North America</a>
+                </span>
+                Nov. 29-30, 2017. Santa Clara, CA
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://www.belgradeventureforum.org">Belgrade Venture Forum</a>
+                </span>
+                Nov. 13-15, 2017. Belgrade, Serbia
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://www.americanbanker.com/conference/digital-lending-investing-2017">Digital Lending + Investing</a>
+                </span>
+                Nov.2-3, 2017. New York, NY
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="http://blockchainforum.global/">Blockchain Economic Forum</a>
+                </span>
+                Oct. 31-Nov. 1, 2017. New York, NY
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="https://coinagenda.com/">CoinAgenda</a>
+                </span>
+                Oct. 24-26, 2017. Las Vegas, NV
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/bwlogo.png">
+                <span class="card-title">
+                    <a href="http://www.businesswire.com/news/home/20170127005071/en/Marcou-Transportation-Group-Acquires-GroundLink-Software-Provider">Business Wire</a>
+                </span>
+                January 27, 2017. Marcou Transportation Group Acquires GroundLink and Software Provider Limo Anywhere
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/sdbj.jpg">
+                <span class="card-title">
+                    <a href="http://www.sdbj.com/accounts/login/?next=/news/2014/dec/04/return-roots/">San Diego Business Journal</a>
+                </span>
+                December 4, 2014
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/wsj.gif">
+                <span class="card-title">
+                    <a href="http://online.wsj.com/article/SB10001424127887323789704578445232848724170.html">The Wall Street Journal</a>
+                </span>
+                April 25, 2013
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/tw1_press.jpg">
+                <span class="card-title">
+                    <a href="http://www.nj.com/hobokennow/index.ssf/2012/03/transit_wireless_founder_advis.html?mobRedir=false">The Jersey Journal</a>
+                </span>
+                March 26, 2012. Transit Wireless founder advises entrepreneurs at NJ Tech Meetup to take personality test
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/DJLogoSmallBlack.gif">
+                <span class="card-title">
+                    <a href="http://www.nj.com/hobokennow/index.ssf/2012/03/transit_wireless_founder_advis.html?mobRedir=false">Dow Jones Financial Information Services</a>
+                </span>
+                March 27, 2012. Groundlink Acquires Limo Anywhere In Ground Transport Deal
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/logo_njo.gif">
+                <span class="card-title">
+                    <a href="http://www.nj.com/hobokennow/index.ssf/2012/03/transit_wireless_founder_advis.html?mobRedir=false">New Jersey Local News</a>
+                </span>
+                March 27, 2012. Transit Wireless founder advises entrepreneurs at NJ Tech Meetup to take personality test
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/pcw2011large.jpg">
+                <span class="card-title">
+                    @PhocusWright
+                </span>
+                The crowd of 1700 travel pros <a href="http://twitter.com/PhocusWright" rel="nofollow" target="_blank">@PhocusWright</a> voted for <a href="http://twitter.com/groundlink" rel="nofollow" target="_blank">@groundlink</a> as the top company to win the Ground Transportation
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="http://www.iotevolutionworld.com/m2m/articles/94212-another-transportation-w-for-alex-mashinsky-nyc-service.htm">iotevolutionworld</a>
+                </span>
+                Another Transportation Win for Alex Mashinsky: NYC Service Cars to Get WiFi
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/youtube.gif">
+                <span class="card-title">
+                    <a href="http://www.youtube.com/watch?v=jhH-GP0TWfI">YouTube</a>
+                </span>
+                Dec. 8, 2010. Alex Mashinsky, CEO of GroundLink at The Travel Innovation Summit
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/jhphotography.gif">
+                <span class="card-title">
+                    <a href="http://jeffreyholmes.photoshelter.com/gallery/NYEW-Guest-Gallery-Monday-November-8-2010/G0000tYIxVLaZHOE/11/10">NYEW</a>
+                </span>
+                Nov. 8, 2010. Photos from NYEW with Alex speaking
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/phocuswright.gif">
+                <span class="card-title">
+                    <a href="http://connect.phocuswright.com/2010/10/groundlink-demonstrates-ground-bookings-solutions-at-the-travel-innovation-summit/">The PhoCusWright Conference</a>
+                </span>
+                Nov. 16-18, 2010. The PhoCusWright Conference, Westin Kierland, Phoenix, Arizona USA
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/enterpreneurweek.gif">
+                <span class="card-title">
+                    <a href="http://www.nyew.org/">New York Entrepreneur Week</a>
+                </span>
+                Nov. 8-12, 2010
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/newyorktimessmallbusinesssummit.gif">
+                <span class="card-title">
+                    <a href="http://nytsmallbusinessummit.com/sessions.php">New York Times Small Business Summit</a>
+                </span>
+                Sep. 23, 2010
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/summitstanford2010.jpg">
+                <span class="card-title">
+                    <a href="http://www.aonetwork.com/AOEvents/2010/Summit-Stanford-2010-0">Summit at Stanford 2010</a>
+                </span>
+                Jul. 27-29, 2010
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/crains-logo.gif">
+                <span class="card-title">
+                    <a href="http://www.crainsnewyork.com/article/20100926/SMALLBIZ/309269970">Ground-transport firm flying high</a>
+                </span>
+                Sep. 26, 2010
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/inclogo.gif">
+                <span class="card-title">
+                    <a href="http://www.inc.com/www.inc.com/news/articles/2010/serial-entrepreneurs-share-insight-and-advice.html">What It Takes to Become a Serial Entrepreneur</a>
+                </span>
+                Sep. 23, 2010
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/huffington-post.gif">
+                <span class="card-title">
+                    <a href="http://www.huffingtonpost.com/2010/08/20/huffpost-innovators-serie_1_n_689185.html#s128868">Groundlink - An Expedia For Ground Transportation</a>
+                </span>
+                Sep 12, 2010
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/alwayson.gif">
+                <span class="card-title">
+                    <a href="http://www.aonetwork.com/AOStory/CEO-Showcase-GroundLink">CEO Showcase: GroundLink</a>
+                </span>
+                Sep 12, 2010
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/mocom.gif">
+                <span class="card-title">
+                    <a href="http://www.mo.com/entrepreneur-interview-alex-mashinsky-ceo-groundlink">mo.com</a>
+                </span>
+                Aug. 10, 2010. "A tenacious leader will reinvent the idea several times until they find the right positioning…"
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/bloomerg.gif">
+                <span class="card-title">
+                    <a href="http://www.youtube.com/user/groundlinkpr#p/a/u/0/aB7cA6DiLUQ">Bloomerg</a>
+                </span>
+                Aug. 17, 2010. GroundLink's Mashinsky Interview
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/techcrunch.gif">
+                <span class="card-title">
+                    <a href="http://techcrunch.com/2010/08/10/free-wifi-gogo-groundlink/">TechCrunch</a>
+                </span>
+                Aug. 10, 2010. Gogo and Groundlink's Partnership, Free Inflight Internet Deal
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/abc_logo.jpg">
+                <span class="card-title">
+                    <a href="http://abclocal.go.com/wabc/story?section=news/local&amp;id=7591882">abc</a>
+                </span>
+                Aug. 5, 2010. WiFi for livery cab riders
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/tmcnet_logo.gif">
+                <span class="card-title">
+                    <a href="http://communication-solutions.tmcnet.com/topics/communication-solutions/articles/94212-another-transportation-w-for-alex-mashinsky-nyc-service.htm">TMCnet</a>
+                </span>
+                Aug. 5, 2010. Another Transportation Win for Alex Mashinsky: NYC Service Cars to Get WiFi
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/gothamist.gif">
+                <span class="card-title">
+                    <a href="http://gothamist.com/2010/08/04/livery_cabs_getting_free_wi-fi.php">gothamist</a>
+                </span>
+                Aug. 5, 2010. Livery Cabs Getting Free Wi-Fi
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/erictric_logo.gif">
+                <span class="card-title">
+                    <a href="http://erictric.com/2010/08/05/free-wifi-to-hit-new-york-city-livery-cars/">Erictric</a>
+                </span>
+                Aug. 5, 2010. Free WiFi To Hit New York City Livery Cars
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/fierce_logo.gif">
+                <span class="card-title">
+                    <a href="http://www.fiercebroadbandwireless.com/story/vc-looking-equip-livery-ny-livery-cars-ad-supported-wifi/2010-08-05">Fierce Broadband Wireless</a>
+                </span>
+                Aug. 5, 2010. VC looking to equip NY livery cars with ad-supported WiFi
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/yahoo_news.gif">
+                <span class="card-title">
+                    <a href="http://news.yahoo.com/s/mashable/20100804/tc_mashable/new_york_car_services_to_get_free_wifi">Yahoo! News</a>
+                </span>
+                Aug. 5, 2010. New York Car Services to Get Free Wi-Fi
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/m2m_logo.gif">
+                <span class="card-title">
+                    <a href="http://m2m.tmcnet.com/topics/m2mevolution/articles/94212-another-transportation-w-for-alex-mashinsky-nyc-service.htm">M2M (Machine to Machine)</a>
+                </span>
+                Aug. 5, 2010. Another Transportation Win for Alex Mashinsky: NYC Service Cars to Get WiFi
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/nbc_logo.gif">
+                <span class="card-title">
+                    <a href="http://www.nbcnewyork.com/news/local-beat/Wi-Fi-Service-Coming-to-NYCs-Livery-Cars-99937264.html">NBC New York</a>
+                </span>
+                Aug. 5, 2010. Wi-Fi Service Coming to NYC's Livery Cars
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/dna_info.gif">
+                <span class="card-title">
+                    <a href="http://dnainfo.com/20100804/manhattan/citys-livery-cabs-could-soon-be-equipped-with-free-wifi">DNAinfo</a>
+                </span>
+                Aug. 5, 2010. City's Livery Cabs Could Soon Be Equipped With Free WiFi
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/mashable.gif">
+                <span class="card-title">
+                    <a href="http://mashable.com/2010/08/04/wifi-livery-cars/">Mashable</a>
+                </span>
+                Aug. 5, 2010. New York Car Services to Get Free Wi-Fi
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/wsj.gif">
+                <span class="card-title">
+                    <a href="http://online.wsj.com/article/SB10001424052748704499604575407773797744474.html">The Wall Street Journal</a>
+                </span>
+                Aug. 4, 2010. Coming Soon to City, Wi-Fi on the Go
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/pbs_logo.gif">
+                <span class="card-title">
+                    <a href="http://www.youtube.com/watch?v=YoUi6zEMeXY">PBS' Nightly Business Report</a>
+                </span>
+                Jul. 31, 2010. GroundLink on PBS' Nightly Business Report
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/onmedia-logo.jpg">
+                <span class="card-title">
+                    <a href="http://www.clipsyndicate.com/video/playlist/15579/1302217?title=onmedia_nyc_feb_2_2010">OnMedia NYC</a>
+                </span>
+                Jul. 31, 2010. Watch Alex Mashinsky on OnMedia NYC
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/abc_logo.jpg">
+                <span class="card-title">
+                    <a href="http://abclocal.go.com/kgo/story?section=news/business&amp;id=7580241">abc</a>
+                </span>
+                July 28, 2010. Venture capitalist survey shows drop in confidence
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/nytimes.gif">
+                <span class="card-title">
+                    <a href="http://boss.blogs.nytimes.com/2010/06/23/how-i-saved-my-company-groundlink/">The New York Times</a>
+                </span>
+                June, 2010. How I Saved My Company: GroundLink
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/crains.gif">
+                <span class="card-title">
+                    <a href="http://mycrains.crainsnewyork.com/small_business_awards/profiles/2010/214">Crain’s</a>
+                </span>
+                June, 2010. Alex Mashinsky was selected as one of Crain’s 2010 Top Entrepreneurs
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/inc_s.gif">
+                <span class="card-title">
+                    Inc 500
+                </span>
+                December, 2008. Limores selected as 8th fastest growing transportation company in America.
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/mainLogo.gif">
+                <span class="card-title">
+                    CNN. Money.com
+                </span>
+                April 18, 2006 Company Founders make better CEOs
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/TheDeal.gif">
+                <span class="card-title">
+                    TheDeal.com
+                </span>
+                March 22, 2006 Arbinet faces proxy battle
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/100-Voices_intro.jpg">
+                <span class="card-title">
+                    <a href="http://www.tmcnet.com/voip/1006/top-voices-of-ip-communications.htm">Top Voices of IP Communications</a>
+                </span>
+                In October 2006 Alex was selected as one of the top 100 voices of IP communications along side the inventors and builders of the internet
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/BOL_logo_top_page_05.gif">
+                <span class="card-title">
+                    Barrons
+                </span>
+                July 25, 2005. IF LEMONY SNICKET WROTE ABOUT STOCKS..
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                
+                <span class="card-title">
+                    <a href="../pdf/qoptic_profitable.pdf">Q-Optics Press Release</a>
+                </span>
+                Q-Optics Raises $11 Million Series A round from investor group led by Warburg Pincus
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/sm_arbinet.gif">
+                <span class="card-title">
+                    <a href="../pdf/arbinet_funding.pdf">From TheDeal.com</a>
+                </span>
+                July, 2001. Arbinet draws $35 million
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/wallStreetJournal.gif">
+                <span class="card-title">
+                    The Wall Street Journal
+                </span>
+                August, 2000 Arbinet Plays Matchmaker to Telecom Firms
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/pwc.gif">
+                <span class="card-title">
+                    PWC Annual Meeting
+                </span>
+                March, 2000 "how bandwidth exchanges can help Telcos - PWC annual meeting Paris March 2000"
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/cnn.gif">
+                <span class="card-title">
+                    CNN FN, The Financial Network
+                </span>
+                October 24, 1997. "Digital Jam Interview: Telecom Startup Arbinet; Alex Mashinsky and Anchor Steve Young"
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/nytimes.gif">
+                <span class="card-title">
+                    <a href="NYTimes.html">The New York Times</a>
+                </span>
+                July 11, 1999. Jumping Off the Bandwidth Wagon "There, in his cramped office above the Pulse Night Club, Alex Mashinsky has created an electronic trading floor for telephone service that resembles nothing so much as the international market for traditional commodities."
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/business2.gif">
+                <span class="card-title">
+                    <a href="../pdf/fastMinuteExchange.htm">Business 2.0</a>
+                </span>
+                April, 1999. Fast Times on the Minute Exchange "Waste not, want not. Online spot markets are lining up to exchange global bandwidth on the fly."
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/forbesLogo.gif">
+                <span class="card-title">
+                    <a href="../pdf/bandwidthExchange.pdf">Bandwidth Exchange</a>
+                </span>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/infoweek_small.gif">
+                <span class="card-title">
+                    <a href="../pdf/preventTelecomCapacityWaste.pdf">Preventing Telecom Capacity From Going To Waste</a>
+                </span>
+                Nov. 1999
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/businessWeek.gif">
+                <span class="card-title">
+                    <a href="../pdf/goodByeFixed.pdf">GOOD-BYE TO FIXED PRICING?</a>
+                </span>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content">
+                <img class="responsive-img" src="../images/handshake2.jpg">
+                <span class="card-title">
+                    Alex receives an award from the current prime minister of Israel Ehud Olmert
+                </span>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+      <h5><a name="events">Events</a></h5>
+
+      <p>Alex has been a featured speaker at over 120 conferences around the world.<br>
+        To invite Alex to speak at your event please email <a href="mailto:alex@mashinsky.com">alex@mashinsky.com</a></p>
+
+      <div class="collection">
+
+        <!--to the NYC Chambers of Commerce Sep 27, 2011-->
+        <div class="collection-item">
+          <a href="http://articles.nydailynews.com/2011-09-22/local/30209935_1_transit-wireless-wireless-service-underground-stations" target="_blank">Transit Wireless launches coverage in first 6 NYC subway stations</a>, 294 more to come...
+        </div>
+        <div class="collection-item">
+          NY Venture Summit, July 20, Alkemy presentation.<br>
+          <a href="https://www.youtube.com/user/UNYstartups#p/u/13/58bshxJRTH8">The Art of Risk Taking</a><br>
+          Listen as Alex Mashinsky, a seven time startup founder, introduces new entrepreneurs to the philosophy of
+          Risk Taking and the culture that exists in the realm of startups at General Assembly in NYC.
+        </div>
+        <div class="collection-item">
+          <a href="http://www.dcia.info/activities/" target="_blank">DCIA P2P MARKET CONFERENCE</a> - Keynote Speaker<br>
+          March 17, 2009 2:45PM - 3:00PM, Cornell Club of New York.
+        </div>
+        <div class="collection-item">
+          <strong>P2P &amp; Video Conference</strong> -- Speaker<br>
+          11:45 – 12:30 Oct. 27th 2008, Los Angeles
+        </div>
+        <div class="collection-item">
+          <strong>Emerging as an entrepreneur in the current economic cpmate</strong> -- keynote speaker<br>
+          Oct. 23rd 2002, InSITE Institute -- E&amp;Y Time Square offices
+        </div>
+        <div class="collection-item">
+          <a href="http://www.ibnsummit.com" target="_blank">Integrated Broadband Networks Summit</a> - Speaker<br>
+          March 24 2003, New Mexico
+        </div>
+        <div class="collection-item">
+          <a href="http://www.icc2002.com/" target="_blank">IEEE COMSOC EXPO</a> -- SPEAKER<br>
+          "Real-time provisioning of optical circuits in multiple carrier, multiple vendor environments" Apr. 29, 2002
+          New York
+        </div>
+        <div class="collection-item">
+          <a href="http://www.iir-conferences.com/site/_prod-grp.cfm?DirName=cg1075&amp;ConfCode=cg1075&amp;iv=23%20" target="_blank">Optical
+            Service Provisioning Lisbon</a>, Feb. 7-8 2002, Portugal
+        </div>
+        <div class="collection-item">
+          <a href="http://www.cwmexpo.com/" target="_blank">Collocation &amp; Hosting Summit 2001</a> (PBI Media) --
+          SPEAKING, October 29-31 2001, Washington DC
+        </div>
+        <div class="collection-item">
+          <a href="http://www.telcap.co.uk/capacity2001europe/index.htm" target="_blank">Capacity 2001 Europe</a>
+          (TELCAP), October 25-26 2001, London
+        </div>
+        <div class="collection-item">
+          <a href="http://www.kmicorp.com/fiberoptics_conferences/newport.htm" target="_blank">KMI's 24th Annual
+            Newport Conference on Fiberoptics Markets</a> -- ATTENDING, October 15-17 2001, Newport, RI
+        </div>
+        <div class="collection-item">
+          <a href="http://www.opticalnetworksummit.com/" target="_blank">Optical Network Summit</a> (Marcus Evans) --
+          ATTENDING, October 14-16 2001, New Mexico
+        </div>
+        <div class="collection-item">
+          <a href="http://www.it-telcomsolutions.com/" target="_blank">Bandwidth Trading</a> (Marcus Evans) --
+          SPEAKING, October 10-12 2001, Dallas TX
+        </div>
+        <div class="collection-item">
+          <a href="http://www.risk-conferences.com/telecomseuro/" target="_blank">Telecoms Capacity 2001 Europe</a>
+          (Risk) -- SPEAKING, October 1 &amp; 2 2001, London
+        </div>
+        <div class="collection-item">
+          <a href="http://www.opticalnetworksummit.com/" target="_blank">Optical Network Summit</a>, April 26th-28th,
+          Tucson Arizona
+        </div>
+        <div class="collection-item">
+          <a href="http://www.risk-conferences.com/telecomsusa/" target="_blank">Telecom Capacity 2001</a>
+          "Voice over IP/ minutes trading: a model for bandwidth?", June 28th &amp; 29th, New York NY
+        </div>
+        <div class="collection-item">
+          <a href="http://www.risk-conferences.com/telecomseuro/" target="_blank">Developing a Liquid Market</a> <br>
+          Alex on Panel on behalf of Arbinet TheXchange, October 1st 2001 @ 2:30pm, London.
+        </div>
+        <div class="collection-item">
+          <a href="http://www.cwmexpo.com/" target="_blank">Moving up the value chain-encouraging customers to spend
+            more</a><br>
+          30 minute speaker slot on 30th, October 29-31, Ominshoram, Washington DC.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2000-2017 Alex Mashinsky
+        <span class="right">The greatest risk is not taking one</span>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/jsrender.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    $(function () {
+      var press = [{
+          title: "20 Tech Giants Building Cryptocurrency Companies",
+          link: "https://blocklr.com/news/tech-giants-building-cryptocurrency-companies/",
+          text: 'November 7, 2018'
+        },{
+          img: "../images/skannerup.jpg",
+          title: "Alex gives interview to William Skannerup",
+          link: "https://www.linkedin.com/feed/update/urn:li:activity:6406783629934108672",
+          text: 'May 28, 2018'
+        },
+        {
+          img: "../images/bloomberg.png",
+          title: "A Verbal Cryptobrawl Breaks Out at Milken Over Bitcoin's Future",
+          link: "https://www.bloomberg.com/news/articles/2018-05-02/a-verbal-cryptobrawl-breaks-out-at-milken-over-bitcoin-s-future",
+          text: 'May 2, 2018'
+        },
+        {
+          img: "../images/nypost.png",
+          title: "Nouriel Roubini says Bitcoin is ‘bulls–t’",
+          link: "https://nypost.com/2018/05/02/nouriel-roubini-says-bitcoin-is-bulls-t",
+          text: 'May 2, 2018'
+        },
+        {
+          img: "../images/fortune.png",
+          title: "A Verbal Cryptobrawl Broke Out at the Milken Institute Global Conference",
+          link: "http://fortune.com/2018/05/02/milken-conference-institute-2018/",
+          text: 'May 2, 2018'
+        },
+        {
+          img: "../images/cointelegraph.png",
+          title: "‘Dr. Doom’ Slams Cryptocurrencies, Says ‘Talk Of Decentralization Is Bulls**t’",
+          link: "https://cointelegraph.com/news/dr-doom-slams-cryptocurrencies-says-talk-of-decentralization-is-bullst",
+          text: 'May 4, 2018'
+        },
+        {
+          img: "../images/vanityfair.png",
+          title: "“THE OPPORTUNITY HAS NEVER BEEN RICHER”: SILICON VALLEY SEES DOLLAR SIGNS IN THE A.I. APOCALYPSE",
+          link: "https://www.vanityfair.com/news/2018/05/silicon-valley-sees-dollar-signs-in-the-ai-apocalypse",
+          text: 'May 2, 2018'
+        },
+        // from celsius site
+        {
+          title: "Token Fest",
+          link: "https://tokenfest.io/",
+          text: "Mar. 15-16, 2018. San Francisco, CA"
+        },
+        {
+          title: "Bitcoin, Ethereum & Blockchain SuperConference",
+          link: "https://www.bitcoinsuperconference.com/",
+          text: "Feb. 16-18, 2018. Dallas, TX"
+        },
+        {
+          title: "Cayman Finance",
+          text: "Jan. 16, 2018. New York, NY"
+        },
+        {
+          title: "BlockTalks",
+          link: "https://www.eventbrite.com/e/blocktalks-tickets-39377764955",
+          text: "Dec. 19, 2017. New York, NY"
+        },
+        {
+          title: "Demo Day Breakfast & BlockchainMix: New Trends, Investment Opportunities",
+          link: "https://www.eventbrite.com/e/demo-day-breakfast-blockchainmix-new-trends-investment-opportunities-tickets-40874907950?aff=es2",
+          text: "Dec. 15, 2017. New York, NY"
+        },
+        {
+          img: "../images/chipin.png",
+          title: "Meet the Boss – Exclusive Interview with Celsius CEO Alex Mashinsky",
+          link: "https://www.chipin.com/celsius-ceo-alex-mashinsky-interview/",
+          text: "Dec. 14, 2017. New York, NY"
+        },
+        {
+          title: "Rise FinTech Fest",
+          link: "https://fintechfest.splashthat.com/",
+          text: "Dec. 13, 2017. New York, NY"
+        },
+        {
+          title: "GlobalOps 2017",
+          link: "https://globalops2017.com/",
+          text: "Dec. 12-13, 2017. New York, NY"
+        },
+        {
+          title: "Geektime Blockchain Summit",
+          link: "https://www.eventbrite.com/e/geektime-blockchain-summit-tickets-39685721060?ref=eios&aff=eios",
+          text: "Dec. 10, 2017. Tel Aviv, Israel"
+        },
+        {
+          title: "Crypto Space",
+          link: "http://cryptospace.moscow",
+          text: "Dec. 8, 2017. Moscow, Russia"
+        },
+        {
+          title: "Israeli-Serb Tech Meetup",
+          link: "https://www.sosanyc.co/so/7M0Z5SBj#/main",
+          text: "Dec. 6, 2017. New York, NY"
+        },
+        {
+          title: "Bereisheet Tech NYC",
+          link: "http://www.digital.nyc/events/december-6-bereisheet-tech-nyc-event",
+          text: "Dec. 6, 2017. New York, NY"
+        },
+        {
+          title: "Token Summit",
+          link: "http://tokensummit.com/",
+          text: "Dec. 4-5, 2017. San Francisco, CA"
+        },
+        {
+          title: "2017 Block & Coin Summit: NAVIGATING THE CRYPTOCONOMY",
+          link: "https://www.meetup.com/Morris-Meetup/events/244551265/",
+          text: "Dec. 4, 2017. Morristown, NJ"
+        },
+        {
+          title: "Blockchain Expo North America",
+          link: "https://blockchain-expo.com/northamerica/",
+          text: "Nov. 29-30, 2017. Santa Clara, CA"
+        },
+        {
+          title: "Belgrade Venture Forum",
+          link: "https://www.belgradeventureforum.org",
+          text: "Nov. 13-15, 2017. Belgrade, Serbia"
+        },
+        {
+          title: "Digital Lending + Investing",
+          link: "https://www.americanbanker.com/conference/digital-lending-investing-2017",
+          text: "Nov.2-3, 2017. New York, NY"
+        },
+        {
+          title: "Blockchain Economic Forum",
+          link: "http://blockchainforum.global/",
+          text: "Oct. 31-Nov. 1, 2017. New York, NY"
+        },
+        {
+          title: "CoinAgenda",
+          link: "https://coinagenda.com/",
+          text: "Oct. 24-26, 2017. Las Vegas, NV"
+        },
+        // from celsius site
+        {
+          img: "../images/bwlogo.png",
+          title: "Business Wire",
+          link: "http://www.businesswire.com/news/home/20170127005071/en/Marcou-Transportation-Group-Acquires-GroundLink-Software-Provider",
+          text: "January 27, 2017. Marcou Transportation Group Acquires GroundLink and Software Provider Limo Anywhere"
+        },
+        {
+          img: "../images/sdbj.jpg",
+          title: "San Diego Business Journal",
+          link: "http://www.sdbj.com/accounts/login/?next=/news/2014/dec/04/return-roots/",
+          text: "December 4, 2014"
+        },
+        {
+          img: "../images/wsj.gif",
+          title: "The Wall Street Journal",
+          link: "http://online.wsj.com/article/SB10001424127887323789704578445232848724170.html",
+          text: "April 25, 2013"
+        },
+        {
+          img: "../images/tw1_press.jpg",
+          title: "The Jersey Journal",
+          link: "http://www.nj.com/hobokennow/index.ssf/2012/03/transit_wireless_founder_advis.html?mobRedir=false",
+          text: "March 26, 2012. Transit Wireless founder advises entrepreneurs at NJ Tech Meetup to take personality test"
+        },
+        {
+          img: "../images/DJLogoSmallBlack.gif",
+          title: "Dow Jones Financial Information Services",
+          link: "http://www.nj.com/hobokennow/index.ssf/2012/03/transit_wireless_founder_advis.html?mobRedir=false",
+          text: "March 27, 2012. Groundlink Acquires Limo Anywhere In Ground Transport Deal"
+        },
+        {
+          img: "../images/logo_njo.gif",
+          title: "New Jersey Local News",
+          link: "http://www.nj.com/hobokennow/index.ssf/2012/03/transit_wireless_founder_advis.html?mobRedir=false",
+          text: "March 27, 2012. Transit Wireless founder advises entrepreneurs at NJ Tech Meetup to take personality test"
+        },
+        {
+          img: "../images/pcw2011large.jpg",
+          title: "@PhocusWright",
+          link: "",
+          text: 'The crowd of 1700 travel pros <a href="http://twitter.com/PhocusWright" rel="nofollow" target="_blank">@PhocusWright</a> voted for <a href="http://twitter.com/groundlink" rel="nofollow" target="_blank">@groundlink</a> as the top company to win the Ground Transportation'
+        },
+        {
+          img: "",
+          title: "iotevolutionworld",
+          link: "http://www.iotevolutionworld.com/m2m/articles/94212-another-transportation-w-for-alex-mashinsky-nyc-service.htm",
+          text: "Another Transportation Win for Alex Mashinsky: NYC Service Cars to Get WiFi"
+        },
+        {
+          img: "../images/youtube.gif",
+          title: "YouTube",
+          link: "http://www.youtube.com/watch?v=jhH-GP0TWfI",
+          text: "Dec. 8, 2010. Alex Mashinsky, CEO of GroundLink at The Travel Innovation Summit"
+        },
+        {
+          img: "../images/jhphotography.gif",
+          title: "NYEW",
+          link: "http://jeffreyholmes.photoshelter.com/gallery/NYEW-Guest-Gallery-Monday-November-8-2010/G0000tYIxVLaZHOE/11/10",
+          text: "Nov. 8, 2010. Photos from NYEW with Alex speaking"
+        },
+        {
+          img: "../images/phocuswright.gif",
+          title: "The PhoCusWright Conference",
+          link: "http://connect.phocuswright.com/2010/10/groundlink-demonstrates-ground-bookings-solutions-at-the-travel-innovation-summit/",
+          text: "Nov. 16-18, 2010. The PhoCusWright Conference, Westin Kierland, Phoenix, Arizona USA"
+        },
+        {
+          img: "../images/enterpreneurweek.gif",
+          title: "New York Entrepreneur Week",
+          link: "http://www.nyew.org/",
+          text: "Nov. 8-12, 2010"
+        },
+        {
+          img: "../images/newyorktimessmallbusinesssummit.gif",
+          title: "New York Times Small Business Summit",
+          link: "http://nytsmallbusinessummit.com/sessions.php",
+          text: "Sep. 23, 2010"
+        },
+        {
+          img: "../images/summitstanford2010.jpg",
+          title: "Summit at Stanford 2010",
+          link: "http://www.aonetwork.com/AOEvents/2010/Summit-Stanford-2010-0",
+          text: "Jul. 27-29, 2010"
+        },
+        {
+          img: "../images/crains-logo.gif",
+          title: "Ground-transport firm flying high",
+          link: "http://www.crainsnewyork.com/article/20100926/SMALLBIZ/309269970",
+          text: "Sep. 26, 2010"
+        },
+        {
+          img: "../images/inclogo.gif",
+          title: "What It Takes to Become a Serial Entrepreneur",
+          link: "http://www.inc.com/www.inc.com/news/articles/2010/serial-entrepreneurs-share-insight-and-advice.html",
+          text: "Sep. 23, 2010"
+        },
+        {
+          img: "../images/huffington-post.gif",
+          title: "Groundlink - An Expedia For Ground Transportation",
+          link: "http://www.huffingtonpost.com/2010/08/20/huffpost-innovators-serie_1_n_689185.html#s128868",
+          text: "Sep 12, 2010"
+        },
+        {
+          img: "../images/alwayson.gif",
+          title: "CEO Showcase: GroundLink",
+          link: "http://www.aonetwork.com/AOStory/CEO-Showcase-GroundLink",
+          text: "Sep 12, 2010"
+        },
+        {
+          img: "../images/mocom.gif",
+          title: "mo.com",
+          link: "http://www.mo.com/entrepreneur-interview-alex-mashinsky-ceo-groundlink",
+          text: 'Aug. 10, 2010. "A tenacious leader will reinvent the idea several times until they find the right positioning…"'
+        },
+        {
+          img: "../images/bloomerg.gif",
+          title: "Bloomerg",
+          link: "http://www.youtube.com/user/groundlinkpr#p/a/u/0/aB7cA6DiLUQ",
+          text: "Aug. 17, 2010. GroundLink's Mashinsky Interview"
+        },
+        {
+          img: "../images/techcrunch.gif",
+          title: "TechCrunch",
+          link: "http://techcrunch.com/2010/08/10/free-wifi-gogo-groundlink/",
+          text: "Aug. 10, 2010. Gogo and Groundlink's Partnership, Free Inflight Internet Deal"
+        },
+        {
+          img: "../images/abc_logo.jpg",
+          title: "abc",
+          link: "http://abclocal.go.com/wabc/story?section=news/local&amp;id=7591882",
+          text: "Aug. 5, 2010. WiFi for livery cab riders"
+        },
+        {
+          img: "../images/tmcnet_logo.gif",
+          title: "TMCnet",
+          link: "http://communication-solutions.tmcnet.com/topics/communication-solutions/articles/94212-another-transportation-w-for-alex-mashinsky-nyc-service.htm",
+          text: "Aug. 5, 2010. Another Transportation Win for Alex Mashinsky: NYC Service Cars to Get WiFi"
+        },
+        {
+          img: "../images/gothamist.gif",
+          title: "gothamist",
+          link: "http://gothamist.com/2010/08/04/livery_cabs_getting_free_wi-fi.php",
+          text: "Aug. 5, 2010. Livery Cabs Getting Free Wi-Fi"
+        },
+        {
+          img: "../images/erictric_logo.gif",
+          title: "Erictric",
+          link: "http://erictric.com/2010/08/05/free-wifi-to-hit-new-york-city-livery-cars/",
+          text: "Aug. 5, 2010. Free WiFi To Hit New York City Livery Cars"
+        },
+        {
+          img: "../images/fierce_logo.gif",
+          title: "Fierce Broadband Wireless",
+          link: "http://www.fiercebroadbandwireless.com/story/vc-looking-equip-livery-ny-livery-cars-ad-supported-wifi/2010-08-05",
+          text: "Aug. 5, 2010. VC looking to equip NY livery cars with ad-supported WiFi"
+        },
+        {
+          img: "../images/yahoo_news.gif",
+          title: "Yahoo! News",
+          link: "http://news.yahoo.com/s/mashable/20100804/tc_mashable/new_york_car_services_to_get_free_wifi",
+          text: "Aug. 5, 2010. New York Car Services to Get Free Wi-Fi"
+        },
+        {
+          img: "../images/m2m_logo.gif",
+          title: "M2M (Machine to Machine)",
+          link: "http://m2m.tmcnet.com/topics/m2mevolution/articles/94212-another-transportation-w-for-alex-mashinsky-nyc-service.htm",
+          text: "Aug. 5, 2010. Another Transportation Win for Alex Mashinsky: NYC Service Cars to Get WiFi"
+        },
+        {
+          img: "../images/nbc_logo.gif",
+          title: "NBC New York",
+          link: "http://www.nbcnewyork.com/news/local-beat/Wi-Fi-Service-Coming-to-NYCs-Livery-Cars-99937264.html",
+          text: "Aug. 5, 2010. Wi-Fi Service Coming to NYC's Livery Cars"
+        },
+        {
+          img: "../images/dna_info.gif",
+          title: "DNAinfo",
+          link: "http://dnainfo.com/20100804/manhattan/citys-livery-cabs-could-soon-be-equipped-with-free-wifi",
+          text: "Aug. 5, 2010. City's Livery Cabs Could Soon Be Equipped With Free WiFi"
+        },
+        {
+          img: "../images/mashable.gif",
+          title: "Mashable",
+          link: "http://mashable.com/2010/08/04/wifi-livery-cars/",
+          text: "Aug. 5, 2010. New York Car Services to Get Free Wi-Fi"
+        },
+        {
+          img: "../images/wsj.gif",
+          title: "The Wall Street Journal",
+          link: "http://online.wsj.com/article/SB10001424052748704499604575407773797744474.html",
+          text: "Aug. 4, 2010. Coming Soon to City, Wi-Fi on the Go"
+        },
+        {
+          img: "../images/pbs_logo.gif",
+          title: "PBS' Nightly Business Report",
+          link: "http://www.youtube.com/watch?v=YoUi6zEMeXY",
+          text: "Jul. 31, 2010. GroundLink on PBS' Nightly Business Report"
+        },
+        {
+          img: "../images/onmedia-logo.jpg",
+          title: "OnMedia NYC",
+          link: "http://www.clipsyndicate.com/video/playlist/15579/1302217?title=onmedia_nyc_feb_2_2010",
+          text: "Jul. 31, 2010. Watch Alex Mashinsky on OnMedia NYC"
+        },
+        {
+          img: "../images/abc_logo.jpg",
+          title: "abc",
+          link: "http://abclocal.go.com/kgo/story?section=news/business&id=7580241",
+          text: "July 28, 2010. Venture capitalist survey shows drop in confidence"
+        },
+        {
+          img: "../images/nytimes.gif",
+          title: "The New York Times",
+          link: "http://boss.blogs.nytimes.com/2010/06/23/how-i-saved-my-company-groundlink/",
+          text: "June, 2010. How I Saved My Company: GroundLink"
+        },
+        {
+          img: "../images/crains.gif",
+          title: "Crain’s",
+          link: "http://mycrains.crainsnewyork.com/small_business_awards/profiles/2010/214",
+          text: "June, 2010. Alex Mashinsky was selected as one of Crain’s 2010 Top Entrepreneurs"
+        },
+        {
+          img: "../images/inc_s.gif",
+          title: "Inc 500",
+          link: "",
+          text: "December, 2008. Limores selected as 8th fastest growing transportation company in America."
+        },
+        //                {
+        //                    img: "../images/foxnews.gif",
+        //                    title: "FOXNews.com",
+        //                    link: "",
+        //                    text: "September 21, 2007. Cell Phone Service Coming to NYC Subway System"
+        //                },
+        //                {
+        //                    img: "../images/nytimes.gif",
+        //                    title: "The New York Times",
+        //                    link: "",
+        //                    text: "September 20, 2007. M.T.A. Makes Deal for Cellphones in Stations"
+        //                },
+        //                {
+        //                    img: "",
+        //                    title: "The Daily Deal",
+        //                    link: "",
+        //                    text: "May 26, 2006 Investors blasts Arbinet, decry plunging stock price"
+        //                },
+        {
+          img: "../images/mainLogo.gif",
+          title: "CNN. Money.com",
+          link: "",
+          text: "April 18, 2006 Company Founders make better CEOs"
+        },
+        {
+          img: "../images/TheDeal.gif",
+          title: "TheDeal.com",
+          link: "",
+          text: "March 22, 2006 Arbinet faces proxy battle"
+        },
+        {
+          img: "../images/100-Voices_intro.jpg",
+          title: "Top Voices of IP Communications",
+          link: "http://www.tmcnet.com/voip/1006/top-voices-of-ip-communications.htm",
+          text: "In October 2006 Alex was selected as one of the top 100 voices of IP communications along side the inventors and builders of the internet"
+        },
+        {
+          img: "../images/BOL_logo_top_page_05.gif",
+          title: "Barrons",
+          link: "",
+          text: "July 25, 2005. IF LEMONY SNICKET WROTE ABOUT STOCKS.."
+        },
+        {
+          img: "",
+          title: "Q-Optics Press Release",
+          link: "../pdf/qoptic_profitable.pdf",
+          text: "Q-Optics Raises $11 Million Series A round from investor group led by Warburg Pincus"
+        },
+        {
+          img: "../images/sm_arbinet.gif",
+          title: "From TheDeal.com",
+          link: "../pdf/arbinet_funding.pdf",
+          text: "July, 2001. Arbinet draws $35 million"
+        },
+        {
+          img: "../images/wallStreetJournal.gif",
+          title: "The Wall Street Journal",
+          link: "",
+          text: "August, 2000 Arbinet Plays Matchmaker to Telecom Firms"
+        },
+        {
+          img: "../images/pwc.gif",
+          title: "PWC Annual Meeting",
+          link: "",
+          text: 'March, 2000 "how bandwidth exchanges can help Telcos - PWC annual meeting Paris March 2000"'
+        },
+        {
+          img: "../images/cnn.gif",
+          title: "CNN FN, The Financial Network",
+          link: "",
+          text: "October 24, 1997. &quot;Digital Jam Interview: Telecom Startup Arbinet; Alex Mashinsky and Anchor Steve Young&quot;"
+        },
+        {
+          img: "../images/nytimes.gif",
+          title: "The New York Times",
+          link: "NYTimes.html",
+          text: "July 11, 1999. Jumping Off the Bandwidth Wagon &quot;There, in his cramped office above the Pulse Night Club, Alex Mashinsky has created an electronic trading floor for telephone service that resembles nothing so much as the international market for traditional commodities.&quot;"
+        },
+        {
+          img: "../images/business2.gif",
+          title: "Business 2.0",
+          link: "../pdf/fastMinuteExchange.htm",
+          text: "April, 1999. Fast Times on the Minute Exchange &quot;Waste not, want not. Online spot markets are lining up to exchange global bandwidth on the fly.&quot;"
+        },
+        {
+          img: "../images/forbesLogo.gif",
+          title: "Bandwidth Exchange",
+          link: "../pdf/bandwidthExchange.pdf",
+          text: ""
+        },
+        //                {
+        //                    img: "",
+        //                    title: "Keynote address",
+        //                    link: "../pdf/Press_Release_Sept_27_v1.pdf",
+        //                    text: ""
+        //                },
+        {
+          img: "../images/infoweek_small.gif",
+          title: "Preventing Telecom Capacity From Going To Waste",
+          link: "../pdf/preventTelecomCapacityWaste.pdf",
+          text: "Nov. 1999"
+        },
+        {
+          img: "../images/businessWeek.gif",
+          title: "GOOD-BYE TO FIXED PRICING?",
+          link: "../pdf/goodByeFixed.pdf",
+          text: ""
+        },
+        {
+          img: "../images/handshake2.jpg",
+          title: "Alex receives an award from the current prime minister of Israel Ehud Olmert",
+          link: "",
+          text: ""
+        }
+      ];
+
+      // https://github.com/borismoore/jsrender
+      var tmpl = $.templates('#press_card');
+      $('#press').append(tmpl.render(press));
+    })
+
+  </script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fmashinsky.com" title="Twitter settings iframe" style="display: none;"></iframe><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body>
+
+<main>
+    <div class="container">
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header">
+            Alejandro interview
+            <audio controls="">
+              <source src="../media/alejandro.mp4" type="audio/mpeg">
+            </audio>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://foundr.com/cryptocurrencies-alex-mashinsky-celsius/" target="_blank">Listen to Founr podcast with Alex</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://tunein.com/podcasts/Business--Economics-Podcasts/Speaking-of-Crypto-podcast-p1142413/?topicId=129174771" target="_blank">Speaking of Crypto podcast</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://www.hiddenforces.io/podcast/borrowing-bitcoin-alex-mashinsky-celsius" target="_blank">Banking on Bitcoin | Solving the Problem of Credit Using Distributed Applications</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://offthechain.libsyn.com/alex-mashinsky-what-decentralization-really-means" target="_blank">Alex Mashinsky: What Decentralization Really Means</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://blog.icoalert.com/podcast-celsius" target="_blank">Alex Mashinsky, Celsius Network</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://www.fintech4good.co/alex" target="_blank">Xiaochen Zhang With Alex Mashinsky: a serial entrepreneur's journey with blockchain</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            ALEX MASHINSKY
+            Managing Partner of Governing Dynamics
+            <audio controls="">
+              <source src="../media/business-leaders-alex-mashinsky.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://www.iheart.com/podcast/269-speaking-of-crypto-29609845/episode/049-more-profit-to-the-people-30518050/" target="_blank">More Profit to the People with VoIP to MoIP w/ Alex Mashinsky</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://www.stitcher.com/podcast/richard-jacobs/future-tech-podcast/e/53683441" target="_blank">Alex Mashinsky – CEO &amp; Founder of Celsius Network</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            Creating Financial Opportunities Around The Globe by Earning Interest on Crypto
+            <audio controls="">
+              <source src="https://app.pippa.io/public/streams/5b30894b97cd27226c0471cc/episodes/5b3089c997cd27226c0473fc.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://www.podbean.com/media/share/pb-n7wxj-94223e" target="_blank">VOIP Inventor, CRYPTO Investor, 34 patents and +$1B In Raised Funds!</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://soundcloud.com/user-569184365/sunset-crypto-ep-5-alex-mashinsky-ceo-of-celsius-network" target="_blank">Sunset Crypto Ep. 5 - Alex Mashinsky, CEO of Celsius Network</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://www.spreaker.com/user/futuretechpodcast/celsius-network-alex-mashinsky-ceo-peer-" target="_blank">Celsius Network — Alex Mashinsky, CEO — Peer-To-Peer Crypto Lending And Borrowing That Pays You Back</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <a href="https://www.cryptocurrencynewstoday.org/dashcast-ep-2-alex-mashinsky-voip-corruption-in-finance-celsius-network/" target="_blank">DashCast Ep. 2 | Alex Mashinsky (VOIP, Corruption in Finance, Celsius Network)</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2000-2017 Alex Mashinsky
+        <span class="right">The greatest risk is not taking one</span>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fmashinsky.com" title="Twitter settings iframe" style="display: none;"></iframe><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="left: 0px; touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe></body>
